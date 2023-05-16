@@ -42,7 +42,7 @@ public class C_Printf {
 		
 		//무조건 소수점 아래 6째자리까지 보여줌
 		System.out.printf("%f\t%f\n", dNum1, dNum2); // \t=tap의미
-		System.out.printf("%.3f\t%.2f\n", dNum1, dNum2); //.2->두번째자리까지 표시, 1.235	4.53출력
+		System.out.printf("%.3f\t%.2f\n", dNum1, dNum2); //%.2f->.2를 선언 두번째자리까지 표시, 1.235	4.53출력
 		
 		System.out.println("----------------");
 		

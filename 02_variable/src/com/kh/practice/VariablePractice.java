@@ -14,6 +14,7 @@ public class VariablePractice {
 		vp.method3();
 		vp.method4();
 	}
+	private int lenght;
 	
 	public void method1() {
 		
@@ -71,8 +72,6 @@ public class VariablePractice {
 		String jnum1 = sc.nextLine();
 		
 		System.out.println(jnum1.charAt(0));
-		System.out.println(jnum1.charAt(-1));
-//		System.out.println("첫번째 문자 : " + );
-//		System.out.println("두번째 문자 : " + );
+		System.out.println(jnum1.charAt(jnum1.length()-1));
 }
 }
