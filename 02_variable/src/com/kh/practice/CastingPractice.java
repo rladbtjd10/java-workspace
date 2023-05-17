@@ -7,7 +7,7 @@ public class CastingPractice {
 	public static void main(String[] ages) {
 		
 		CastingPractice cp = new CastingPractice();
-//		cp.method1();
+		cp.method1();
 		cp.method2();
 		
 	}
@@ -17,8 +17,13 @@ public class CastingPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("문자 : ");
-		String line = sc.nextLine();
-		char ch1 = line.charAt(0);
+//		String line = sc.nextLine();
+//		char ch1 = line.charAt(0);
+		String ch = sc.next();
+		char ch1 = ch.charAt(0);
+		int a = (int)ch1;
+
+	    
 		
 		int num1 = ch1;
 		int num2 = ++ch1;
