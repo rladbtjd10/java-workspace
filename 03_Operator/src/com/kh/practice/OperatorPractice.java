@@ -85,7 +85,7 @@ public class OperatorPractice {
 		System.out.print("나이 : ");
 		int a = sc.nextInt();
 		
-		result = (a <= 13) ? "어린이" : (a > 13) ? "청소년" : (a > 19) ? "성인"; 
+		result = (a >= 13) ? "어린이" : ( a >= 19) ? "청소년" : ( a > 19) ? "성인"; 
 		System.out.println(result);
 		
 	}
