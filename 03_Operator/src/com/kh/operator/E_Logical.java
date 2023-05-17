@@ -17,10 +17,10 @@ public class E_Logical {
 	public static void main(String[] arge) {
 		
 		E_Logical e = new E_Logical();
-//		e.method1(); 주석 처리 할때: ctrl + /
-//		e.method2();
+		e.method1(); // 주석 처리 할때: ctrl + /
+		e.method2();
 		e.method3();
-//		e.method3_1();
+		e.method3_1();
 	}
 	
 	public void method1() {

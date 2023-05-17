@@ -14,7 +14,7 @@ public class F_Triple {
 	 */
 	
 	public static void main(String[] arge) {
-		
+			
 		F_Triple f = new F_Triple();
 //		f.method1();
 //		f.method2();
