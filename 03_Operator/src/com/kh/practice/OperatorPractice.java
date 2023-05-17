@@ -11,7 +11,8 @@ public class OperatorPractice {
 //		o.method2();
 //		o.method3();
 //		o.method4();
-		o.method5();
+//		o.method5();
+		o.method6();
 	}
 	
 	public void method1() {
@@ -78,17 +79,38 @@ public class OperatorPractice {
 	
 	public void method5() {
 		
-        Scanner sc = new Scanner(System.in);
-        String result = "";
-        
+		String result = "";
 		
+        Scanner sc = new Scanner(System.in);
+        
 		System.out.print("나이 : ");
 		int a = sc.nextInt();
 		
-		result = (a <= 13) ? "어린이" : (a > 13) ? "청소년" : (a > 19) ? "성인"; 
+//		int b = 13;
+//		int c = 19;	
+		result = (a <= 13) ? "어린이" : (a <= 19) ? "청소년" : "어른";
 		System.out.println(result);
 		
 	}
+	
+	public void method6() {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("사과의 개수 : ");
+		int a = sc.nextInt();
+		
+		System.out.print("바구니의 크기 : ");
+		int b = sc.nextInt();
+		
+		int c = a / b;
+	    int result = (a % b == 0) ? c : ++c;		
+		System.out.print("필요한 바구니의 수 : " + result);
+		
+		
+	}
+	
 	
 	
 
