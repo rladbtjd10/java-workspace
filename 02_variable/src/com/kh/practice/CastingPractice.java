@@ -21,8 +21,8 @@ public class CastingPractice {
 		int a = (int)ch;
 		
 		
-		System.out.println("A unicode : "+ a);
-		System.out.println("B unicode : "+ ++a);
+		System.out.println((char)a + " unicode : "+ a);
+		System.out.println((char)++a + " unicode : "+ ++a);
 		
 		
 		

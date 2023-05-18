@@ -78,8 +78,14 @@ public class ConditionPractice {
     	int b = sc.nextInt();
     	
     	int c = b / a;
-	    int result = (b % a == 0) ? c : ++c;		
-		System.out.print(result);
+//	    int result = (b % a == 0) ? c : ++c;		
+//  	System.out.print(result);
+		
+		if(b % a == 0) {
+			System.out.println(c);
+		} else {
+			System.out.println(++c);
+		}
     	 	        
     }
 
@@ -115,12 +121,8 @@ public class ConditionPractice {
     	
     	System.out.print("영어점수 : ");
     	int c = sc.nextInt();
-    	
-    	
-    	
-    	
-  
-    }
+    	  	
+      }
 
     /*
         B 옷가게는 10만 원 이상 사면 5%, 30만 원 이상 사면 10%, 50만원 이상 사면 20%를 할인해준다.
@@ -130,6 +132,18 @@ public class ConditionPractice {
         464,000
      */
     public void practice5() {
+    	
+    	System.out.print("구매한 옷 가격 : ");
+    	int a = sc.nextInt();
+    	
+    	double b = a * 0.05;
+    	double c = a * 0.1;
+    	double d = a * 0.2;
+
+    	if(a >= 100000 && a < 300000) {System.out.println(a - (int)b);}
+    	else if(a >= 300000 && a < 500000) {System.out.println(a - (int)c);}
+    	else if(a >= 500000) {System.out.println(a - (int)d);}
+    	else {System.out.println(a);}
 
     }
 
@@ -139,9 +153,16 @@ public class ConditionPractice {
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
     public void practice6() {
-
+    	
+    	System.out.print("각을 입력하시오 > ");
+    	int a = sc.nextInt();
+    	
+    	if(a > 0 && a < 90) {System.out.print(1);}
+    	if(a == 90) {System.out.print(2);}
+    	if(a > 90 && a < 180) {System.out.print(3);}
+    	if(a == 180) {System.out.print(4);}
+    	
     }
-
 
     /*
       아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요.
@@ -162,6 +183,22 @@ public class ConditionPractice {
       아이디가 틀렸습니다.
     */
     public void practice7() {
+    	
+    	String id = "happy";
+    	int pw = 1234;
+    	
+    	System.out.print("아이디 : ");
+    	String a = sc.nextLine();
+    	
+    	System.out.print("비밀번호 : ");
+    	int b = sc.nextInt();
+    	
+    	if(a == id && b == pw) {System.out.println("로그인 성공!");}
+    	else if(a == id && b != pw) {System.out.println("비밀번호가 틀렸습니다.");}
+    	else {System.out.println("아이디가 틀렸습니다.");}
+    	
+
+//    	 if(a != id && b == pw)
  
     }
 
@@ -180,6 +217,23 @@ public class ConditionPractice {
 
      */
     public void practice8() {
+    	
+    	System.out.print("키(m)를 입력해 주세요: ");
+    	double a = sc.nextDouble();
+    	
+    	System.out.print("몸무게(kg)을 입력해 주세요 : ");
+    	double b = sc.nextDouble();
+    	
+    	double bmi = b / (a * a); 
+    	System.out.println(bmi);
+    	
+    	if(bmi < 18.5) {System.out.println("저체중");}
+    	if(bmi >= 18.5 && bmi < 23) {System.out.println("정상체중");}
+    	if(bmi >= 23 && bmi < 25) {System.out.println("과체중");}
+    	if(bmi >= 25 && bmi < 30) {System.out.println("비만");}
+    	if(bmi >= 30) {System.out.println("고도 비만");}
+    	
+    	
        
     }
 
@@ -195,6 +249,20 @@ public class ConditionPractice {
 
      */
     public void practice9() {
+    	
+    	System.out.print("피연산자1 입력 : ");
+    	int a = sc.nextInt();
+    	
+    	System.out.print("피연산자2 입력 : ");
+    	int b = sc.nextInt();
+    	
+    	System.out.print("연산자를 입력(+,-,*,/,% : ");
+    	int c = sc.nextInt();
+    	
+    	if(a < 0 || b < 0 ) {System.out.println("잘 못 입력 하셨습니다. 프로그램을 종료 합니다.");}
+//    	if else ()
+    	
+    	
 
     }
 
@@ -270,8 +338,12 @@ public class ConditionPractice {
 //    	cp.practice1();
 //    	cp.practice2();
 //    	cp.practice3();
-    	cp.practice4();
-    	
+//    	cp.practice4();
+//    	cp.practice5();
+//    	cp.practice6();
+//    	cp.practice7();
+//    	cp.practice8();
+    	cp.practice9();
     	
     }
 }
