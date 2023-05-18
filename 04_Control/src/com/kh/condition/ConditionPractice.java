@@ -117,6 +117,8 @@ public class ConditionPractice {
     	int c = sc.nextInt();
     	
     	
+    	
+    	
   
     }
 
