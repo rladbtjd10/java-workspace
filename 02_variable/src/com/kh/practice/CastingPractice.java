@@ -17,19 +17,12 @@ public class CastingPractice {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("문자 : ");
-//		String line = sc.nextLine();
-//		char ch1 = line.charAt(0);
-		String ch = sc.next();
-		char ch1 = ch.charAt(0);
-		int a = (int)ch1;
-
-	    
+		char ch = sc.nextLine().charAt(0);
+		int a = (int)ch;
 		
-		int num1 = ch1;
-		int num2 = ++ch1;
 		
-		System.out.println("A unicode : "+num1);
-		System.out.println("B unicode : "+num2);
+		System.out.println("A unicode : "+ a);
+		System.out.println("B unicode : "+ ++a);
 		
 		
 		

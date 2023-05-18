@@ -78,9 +78,7 @@ public class E_Logical {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("문자 값 >");
-		String ch = sc.nextLine();
-		char ch1 = ch.charAt(0);
+		char ch1 = sc.nextLine().charAt(0);
 		int a = ch1;
 		
 		result = (a >= 65) && (a <= 90);
