@@ -121,6 +121,17 @@ public class ConditionPractice {
     	
     	System.out.print("영어점수 : ");
     	int c = sc.nextInt();
+    	
+    	int i = a+b+c;
+    	int j = i / 3;
+    	
+    	if(a >= 40 && j >= 60) { System.out.println("국어 : " + a);}
+    	if(b >= 40 && j >= 60) { System.out.println("수학 : " + b);}
+    	if(c >= 40 && j >= 60) { System.out.println("영어 : " + c);}
+    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("합계 : " + i);}
+    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.printf("평균 : " + "%.1f \n" , (double)j);}
+    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("축하합니다, 합격입니다!");}
+    	else { System.out.println("불합격입니다.");}
     	  	
       }
 
@@ -184,18 +195,41 @@ public class ConditionPractice {
     */
     public void practice7() {
     	
-    	String id = "happy";
+//        String name = "";
+//		
+//		System.out.print("이름을 입력해주세요 >");
+//		name = sc.nextLine();
+//		
+//		System.out.println("김경미" == name); // false
+//		System.out.println("김경미".equals(name)); // true, String 클래스의 equals() 메소드
+//		System.out.println("김경미".charAt(0)); // String 클래스의 charAt(0) 메소드
+//		
+//		// 본인이면 "본인이다.", 본인이 아니라면 "본인이 아니다."
+//		
+//		if ("김경미".equals(name)) { 
+//			System.out.println("본인이다.");
+//		}
+//		else {
+//			System.out.println("본인이 아니다.");
+//		}
+    	
+    	
     	int pw = 1234;
     	
     	System.out.print("아이디 : ");
-    	String a = sc.nextLine();
+    	String id = sc.nextLine();
     	
     	System.out.print("비밀번호 : ");
     	int b = sc.nextInt();
     	
-    	if(a == id && b == pw) {System.out.println("로그인 성공!");}
-    	else if(a == id && b != pw) {System.out.println("비밀번호가 틀렸습니다.");}
+    	if("Happy".equals(id)) {System.out.println("로그인 성공!");}
     	else {System.out.println("아이디가 틀렸습니다.");}
+        if (b == pw) {System.out.println("로그인 성공!");}
+        else {System.out.println("비밀번호가 틀렸습니다.");}
+//    	else if(a == id) {System.out.println("비밀번호가 틀렸습니다.");}
+//    	else if(b != pw) {System.out.println("비밀번호가 틀렸습니다.");}
+//    	else if(a != id) {System.out.println("아이디가 틀렸습니다.");}
+//    	else if(b == pw){System.out.println("아이디가 틀렸습니다.");}
     	
 
 //    	 if(a != id && b == pw)
@@ -259,7 +293,7 @@ public class ConditionPractice {
     	System.out.print("연산자를 입력(+,-,*,/,% : ");
     	int c = sc.nextInt();
     	
-    	if(a < 0 || b < 0 ) {System.out.println("잘 못 입력 하셨습니다. 프로그램을 종료 합니다.");}
+//    	if(a < 0 || b < 0 || c != + || c != - || c != * || c != / || c != % ) {System.out.println("잘 못 입력 하셨습니다. 프로그램을 종료 합니다.");}
 //    	if else ()
     	
     	
@@ -341,9 +375,9 @@ public class ConditionPractice {
 //    	cp.practice4();
 //    	cp.practice5();
 //    	cp.practice6();
-//    	cp.practice7();
+    	cp.practice7();
 //    	cp.practice8();
-    	cp.practice9();
+//    	cp.practice9();
     	
     }
 }
