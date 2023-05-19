@@ -99,10 +99,7 @@ public class D_While {
     	  * 3번 만에 맞혔습니다.
     	  * 
     	  */
-    	 
-//    	 System.out.print("1과 100사이의 값 입력 >");
-//    	 int a = sc.nextInt();
-    	 
+    	   	 
     	 double random = Math.random();
     	 random = Math.random() * 100 + 1;
          int num = (int)random;
@@ -111,75 +108,23 @@ public class D_While {
     	 while(true) {
     		 System.out.print("1과 100사이의 값 입력 >");
     		 int g = sc.nextInt();	
-    		 t+=1;
+    		 t += 1;
     		 
-    		 if(g < num) {System.out.printf("더 큰 수를 입력하세요.");}
-    		 else if(g > num) {System.out.printf("더 작은 수를 입력하세요.");}
-    		 else if(g == num) {System.out.printf( t +"번 만에 맞혔습니다.");}
-    		 break;
+    		 if(g < num) {System.out.println("더 큰 수를 입력하세요.");}
+    		 else if(g > num) {System.out.println("더 작은 수를 입력하세요.");}
+    		 else if(g == num) {System.out.println( t +"번 만에 맞혔습니다."); break;}
     		 
-    			 
     		 }
-    	 		
-    	     
-    	     
-    		 
+
     	 }
     	 
-    	 
-//    	//while문 무한루프
-// 		int input = 0;
-// 		while(true) { 
-// 			System.out.print("숫자 입력 >");
-// 			input =sc.nextInt();
-// 		
-// 			System.out.println(input);
-// 		}
-    	 
-//    	 /*
-// 		 * random값
-// 		 * java.lang.Math 클래스에서 제공하는 random,() 메소드 호출해서 매번 다른 랜덤값을 얻어 낼 수 있음!
-// 		 */
-// 		double random = Math.random();
-// 		System.out.println(random); // 0.0 <= random < 1.0
-// 		
-// 		random = Math.random() * 10;
-// 		System.out.println(random); // 0.0 <= random < 10.0
-// 		
-// 		random = Math.random() * 10 + 1;
-// 		System.out.println(random); // 1.0 <= random < 11.0
-// 		
-// 		int num = (int)random;
-// 		System.out.println(num);
-// 		
-// 		int sum = 0;
-// 		
-// 		
-// 		for(int i=1; i<=num; i++) {
-// 			sum += i;
-// 		}	
-// 			System.out.println("1부터 " + num + "까지의 합계 : " + sum);
-// 			
-//
-// 		
-// 	}
- 	
-    	 
-    	 
-    	 
-    	 
-	     
-    	 
-    	 
-    	 
-     }
-    	 
+
 
 	public static void main(String[] args) {
 		D_While d = new D_While();
 //		d.method1();
 //		d.method2();
-		d.method3();
+//		d.method3();
 //		d.method4();
 		d.method5();
 		
