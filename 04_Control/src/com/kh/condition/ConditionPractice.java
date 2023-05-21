@@ -15,6 +15,7 @@ public class ConditionPractice {
        양수만 입력해주세요.
      */
 	
+//	1번 문제는 이대로도 정답이라 할 수 있지만 보완하자면 홀수도 양수인 조건이 필요해요! 중첩 if문 사용해보는 것 추천!
     public void practice1() {
     	
     	System.out.print("숫자 한 개 입력하세요 : ");
@@ -111,6 +112,8 @@ public class ConditionPractice {
         평균 : 61.0
         축하합니다, 합격입니다!
      */
+    
+//    4번 문제는 조건식이 같은 애들이 이렇게 짜고 보니 보이잖아요! if문 하나로 그 안에 다 넣는 방식으로 수정해보세요!
     public void practice4() {
     	
     	System.out.print("국어점수 : ");
@@ -142,6 +145,8 @@ public class ConditionPractice {
         구매한 옷 가격 : 580,000
         464,000
      */
+    
+//    5번 문제는 50만 원 이상이거나 10만원 미만일 때 등 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! 이것 꼭 시도해보세요!
     public void practice5() {
     	
     	System.out.print("구매한 옷 가격 : ");
@@ -163,7 +168,12 @@ public class ConditionPractice {
         각에서 0도 초과 90도 미만은 예각, 90도는 직각, 90도 초과 180도 미만은 둔각 180도는 평각으로 분류한다.
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
-    public void practice6() {
+    
+//	  6번 문제는 각각의 if문들을 이제 if ~ else if 문으로!
+//    사실 if문 만으로 해결되는데 if ~ else if ~ else 문 등이 나온 건 이 방식을 사용하면 if문 한개로 해결 되는데,
+//    지금처럼 각각의 if문으로만 작성하면 if문이 4개라는 것! 이러면 지금은 짧은 코드지만 길어질 때 코드 성능 차이가 생깁니다.
+//    그러니 꼭 변경해보세요!
+	public void practice6() {
     	
     	System.out.print("각을 입력하시오 > ");
     	int a = sc.nextInt();
@@ -194,26 +204,7 @@ public class ConditionPractice {
       아이디가 틀렸습니다.
     */
     public void practice7() {
-    	
-//        String name = "";
-//		
-//		System.out.print("이름을 입력해주세요 >");
-//		name = sc.nextLine();
-//		
-//		System.out.println("김경미" == name); // false
-//		System.out.println("김경미".equals(name)); // true, String 클래스의 equals() 메소드
-//		System.out.println("김경미".charAt(0)); // String 클래스의 charAt(0) 메소드
-//		
-//		// 본인이면 "본인이다.", 본인이 아니라면 "본인이 아니다."
-//		
-//		if ("김경미".equals(name)) { 
-//			System.out.println("본인이다.");
-//		}
-//		else {
-//			System.out.println("본인이 아니다.");
-//		}
-    	
-    	
+    	    	
     	int pw = 1234;
     	
     	System.out.print("아이디 : ");
@@ -222,17 +213,9 @@ public class ConditionPractice {
     	System.out.print("비밀번호 : ");
     	int b = sc.nextInt();
     	
-    	if("Happy".equals(id)) {System.out.println("로그인 성공!");}
-    	else {System.out.println("아이디가 틀렸습니다.");}
-        if (b == pw) {System.out.println("로그인 성공!");}
+    	if("happy".equals(id) && b == pw) {System.out.println("로그인 성공!");}
+    	else if(!"happy".equals(id)){System.out.println("아이디가 틀렸습니다.");}
         else {System.out.println("비밀번호가 틀렸습니다.");}
-//    	else if(a == id) {System.out.println("비밀번호가 틀렸습니다.");}
-//    	else if(b != pw) {System.out.println("비밀번호가 틀렸습니다.");}
-//    	else if(a != id) {System.out.println("아이디가 틀렸습니다.");}
-//    	else if(b == pw){System.out.println("아이디가 틀렸습니다.");}
-    	
-
-//    	 if(a != id && b == pw)
  
     }
 
@@ -250,7 +233,9 @@ public class ConditionPractice {
         저체중
 
      */
-    public void practice8() {
+    
+//    8번 문제는 5번 문제와 피드백이 동일해요!
+	public void practice8() {
     	
     	System.out.print("키(m)를 입력해 주세요: ");
     	double a = sc.nextDouble();
@@ -282,7 +267,9 @@ public class ConditionPractice {
         15 / 4 = 3
 
      */
-    public void practice9() {
+	
+//	9번 문제는 조건식에서 공통적으로 들어가는 부분을 중첩 if문 사용해보세요!
+	public void practice9() {
     	
     	System.out.print("피연산자1 입력 : ");
     	int a = sc.nextInt();
@@ -290,14 +277,16 @@ public class ConditionPractice {
     	System.out.print("피연산자2 입력 : ");
     	int b = sc.nextInt();
     	
-    	System.out.print("연산자를 입력(+,-,*,/,% : ");
-    	int c = sc.nextInt();
-    	
-//    	if(a < 0 || b < 0 || c != + || c != - || c != * || c != / || c != % ) {System.out.println("잘 못 입력 하셨습니다. 프로그램을 종료 합니다.");}
-//    	if else ()
+    	System.out.print("연산자를 입력(+,-,*,/,%) : ");
+    	String c = sc.next();
     	
     	
-
+    	if(c.equals("+") && a>0 && b>0 ){System.out.println(a +"+"+ b +"="+ (a+b));}
+    	else if(c.equals("-") && a>0 && b>0 ){System.out.println(a +"-"+b+"="+ (a-b));}
+    	else if(c.equals("*") && a>0 && b>0 ){System.out.println(a +"*"+ b +"="+ (a*b));}
+    	else if(c.equals("/") && a>0 && b>0 ){System.out.println(a +"/"+ b +"="+ (a/b));}
+    	else if(c.equals("%") && a>0 && b>0 ){System.out.println(a +"%"+ b +"="+ (a%b));}
+    	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
     }
 
     /*
@@ -312,8 +301,26 @@ public class ConditionPractice {
         메뉴 번호를 입력하세요 : 3
         조회 메뉴입니다.
      */
-    public void practice10() {
+	
+//	10번 문제도 위에 5번과 8번 문제와 피드백이 동일한데요~ 여긴 이외에도 switch문 사용해보는 것도 추천드려요!
+	public void practice10() {
 
+    	System.out.println("1. 입력");
+    	System.out.println("2. 수정");
+    	System.out.println("3. 조회");
+    	System.out.println("4. 삭제");
+    	System.out.println("9. 종료");
+    	
+    	System.out.print("메뉴 번호를 입력하세요: ");
+    	int a = sc.nextInt();
+    	
+    	if(1 == a) {System.out.println("입력 메뉴입니다.");}
+    	if(2 == a) {System.out.println("수정 메뉴입니다.");}
+    	if(3 == a) {System.out.println("조회 메뉴입니다.");}
+    	if(4 == a) {System.out.println("삭제 메뉴입니다.");}
+    	if(9 == a) {System.out.println("종료 메뉴입니다.");}
+    	
+    	
     }
 
     /*
@@ -362,8 +369,41 @@ public class ConditionPractice {
         FAIL [점수 미달] (총점 66.0)
 
      */
+	
+//	11번 문제도 피드백 동일!
     public void practice11() {
+    	
+    	System.out.print("중간 고사 점수 : ");
+    	int a = sc.nextInt();
+    	
+    	System.out.print("기말 고사 점수 : ");
+    	int b = sc.nextInt();
+    	
+    	System.out.print("과제 점수 : ");
+    	int c = sc.nextInt();
         
+    	System.out.print("출석 횟수 : ");
+    	int d = sc.nextInt();
+    	
+    	System.out.println("===========결과==========");
+    	
+    	double i = 0.2*(int)a;
+    	double j = 0.3*(int)b;
+    	double k = 0.3*(int)c;
+    	double h = 0.2*((int)d*5);
+    	
+    	double total = (a+b+c)/3;
+    	
+    	if(total>=70 && h>=14) {System.out.printf("중간 고사 점수(20) : " + "%.1f",(float)i);}
+    	if(total>=70 && h>=14) {System.out.printf("\n기말 고사 점수(30) : " + "%.1f",(float)j);}
+    	if(total>=70 && h>=14) {System.out.printf("\n과제 점수 (30) : " + "%.1f",(float)k);}
+    	if(total>=70 && h>=14) {System.out.printf("\n출석 점수 (20): " + "%.1f",(float)h);}
+    	if(total>=70 && h>=14) {System.out.printf("\n총점 : " + "%.1f",(float)total);}
+        if(total>=70 && h>=14) {System.out.printf("\nPASS");}
+        if(total<70) {System.out.printf(" FAIL [점수 미달] (총점 "+"%.1f"+")", (float)total);}
+    	if(h < 14) {System.out.printf("\n FAIL [출석 횟수 부족] ("+"%d"+"/20)", d);}
+    
+    	
     }
     
     public static void main(String[] args) {
@@ -375,9 +415,11 @@ public class ConditionPractice {
 //    	cp.practice4();
 //    	cp.practice5();
 //    	cp.practice6();
-    	cp.practice7();
+//    	cp.practice7();
 //    	cp.practice8();
 //    	cp.practice9();
+//    	cp.practice10();
+    	cp.practice11();
     	
     }
 }

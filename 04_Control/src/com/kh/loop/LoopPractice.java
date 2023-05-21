@@ -1,7 +1,27 @@
 package com.kh.loop;
 
+import java.util.Scanner;
+
 class LoopPractice {
+	
+	Scanner sc = new Scanner(System.in);
  
+	/*
+	 * for문
+	 * 
+	 * [표기법]
+	 * 
+	 * for(초기식; 조건식; 증감식) {
+	 *        .. 실행 코드 ..
+	 * }
+	 * 
+	 * - 주어진 횟수만큼 코드를 반복 실행하는 구문
+	 * - 초기식은 반복문이 수행될때 단 한번만 실행되는 구문으로 반복문 안에서 사용하게 될 변수를 선언하고 초기값을 대입한다.
+	 * - 조건식의 결과가 false이면 실행 코드를 수행하지 않고 반복문을 빠져나간다.
+	 * - 증감식은 반복문을 제어하는 변수의 값을 증감시키는 구문으로 주로 초기식에 제시한 변수를 가지고 증감 연산자를 사용한다.
+	 * 
+	 */
+	
     /*
         사용자로부터 숫자(1~100) 1개가 입력되었을 때 카운트다운 출력하시오.
         사용자 입력 : 5
@@ -12,16 +32,32 @@ class LoopPractice {
         1
      */
     public void method1() {
-
+    	System.out.print("사용자 입력 : ");
+    	int a = sc.nextInt();
+    	
+    	for(int i=a; i>=1; i--) {
+			System.out.println(i);
+		}
     }
-
+  
+		
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
-
+    	
+//    	int sum1 = 0;
+//    	int sum2 = 0;
+//    	
+//    	for(int i=1; i<=sum1; i+=2) { sum1 += i;
+// 		for(int j=-2; j<=-(sum2); j-=2) {
+// 			sum2 -= j;
+// 			if(sum1+sum2 == 100)continue;
+// 			System.out.println("1부터 " + (sum1+sum2) + "까지의 합계 = 100 ");}
+// 		    System.out.println("\n");}
+//    
     }
 
     /*
-        사용자로부터 문자열을 입력 받고 문자열에서 검색될 문자를 입력 받아 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요. 
+        사용자로부터 문자열을 입력 받고/ 문자열에서 검색될 문자를 입력 받아/ 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요. 
 
         문자열 : banana
         문자 : a
@@ -29,6 +65,22 @@ class LoopPractice {
 
     */
     public void method3() {
+    	
+    	
+//    	System.out.print("문자열 : ");
+//    	String a =sc.nextLine();
+//    	
+//    	System.out.print("문자 : ");
+//    	String b =sc.nextLine();
+//    	int t = 0;
+//    	
+//    	for (int i=0; i<=a.length(); i++) {
+//    		
+//    		if(b.equals(a)	 continue;
+//    		t += 1;
+//    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);
+//    		}		
+    	
 
     }
 
@@ -43,6 +95,10 @@ class LoopPractice {
         0
      */
     public void method4() {
+    	
+    	double random = Math.random();
+   	    random = Math.random() * 100 + 1;
+        int num = (int)random;
 
     }
 
@@ -85,6 +141,16 @@ class LoopPractice {
     */
     public void method6() {
 
+    }
+    
+    public static void main(String[] args) {
+    	LoopPractice l = new LoopPractice();
+//    	l.method1();
+//    	l.method2();
+//    	l.method3();
+//    	l.method4();
+//    	l.method5();
+//    	l.method6();
     }
 
 }
