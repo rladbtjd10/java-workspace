@@ -42,7 +42,6 @@ public class ArrayPractice {
 		int q = sc.nextInt();
 		
 	    int[] d = new int[q];
-	    int[] copy = null;
 	    
 	    int sum = 0;
 	    
@@ -50,15 +49,11 @@ public class ArrayPractice {
 	    	
 			System.out.print("배열 "+ i +"번째 인덱스에 넣을 값 : ");
 			d[i] = sc.nextInt(); 
-			copy = d.clone();
 			sum += d[i];
-			 
 			
-		} System.out.print(Arrays.toString(copy));
+		} System.out.println(Arrays.toString(d));
 		   System.out.println(sum);
 	    
-		
-		
 	}
 	
 	
@@ -69,11 +64,36 @@ public class ArrayPractice {
 	 * */
 	public void method3() {
 		
+		boolean a = false;
+		
+		String[] f = {"족발", "치킨", "피자"};
+		int[] n = {1, 2, 3};
+		
+		System.out.print("음식 메뉴 : ");
+		String k = sc.nextLine();
+		
+		System.out.print("개수 : ");
+		int v = sc.nextInt();
+		
+		for (int i = 0; i < f.length; i++) {
+			for (int j = 0; j < n.length; j++) {
+			if (f[i].equals(k) && n[j] == v) {
+							a = true;
+							break;
+						} 
+				}
+		}
+			if (a == true) {
+					System.out.println("배달 가능");
+			} else {
+		System.out.println("배달 불가능");
+					}
 	}
+
 	
 	/*
 	 * 
-	 * 사용자에게 주민등록번호를 입력받아 성별자리 이후부터 *로 가리고 출력하세요.
+	 * 사용자에게 주민등록번호를 입력받아/ 성별자리 이후부터 *로 가리고 출력하세요.
 	 * 단, 원본 배열은 건드리지 않고! 
 	 * 
 	 * 주민등록번호 : 123456-1234567
@@ -81,6 +101,30 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method4() {
+		
+		System.out.print("주민등록번호 : ");
+		
+		
+//		String user = "";
+//		char[] usercha = null;
+//		System.out.print("주민등록번호 : ");
+//		user = sc.nextLine();
+//		
+//		usercha = new char[user.length()];
+//		System.out.println();
+//		for (int i = 0; i < user.length(); i++) {
+//			usercha[i] = user.charAt(i);
+//		}
+//		for (int i = 0; i < usercha.length; i++) {
+//			if (i > 7) {
+//				System.out.print("*");
+//			} else {
+//​
+//				System.out.print(usercha[i]);
+//			}
+		
+		
+		
 		
 	}
 	
@@ -93,15 +137,34 @@ public class ArrayPractice {
 	 * */
 	public void method5() {
 		
+		System.out.print("단어 입력 : ");
+		String s = sc.nextLine();
+		String[] a = new String[s.length()];
+		
+		String[] copy = new String[s.length()];
+		
+		String sum = "";
+		
+		for(int i=0; i<a.length; i++) {
+			a[i] = sc.nextLine(); 
+			if() {
+				
+			}
+			
+			System.out.print(Arrays.toString(a));
+		}
+			
+			
+		
 	}
 	
 	public static void main(String[] args) {
 		ArrayPractice a = new ArrayPractice();
 //		a.method1();
-		a.method2();
+//		a.method2();
 //		a.method3();
 //		a.method4();
-//		a.method5();
+		a.method5();
 		
 		
 	}
