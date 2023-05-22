@@ -76,7 +76,7 @@ class LoopPractice {
     	
     	for (int i=0; i<=a.length(); i++) {
     		
-    		if(b.equals(a)	 continue;
+//    		if(b.equals(a)	 continue;
     		t += 1;
     		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);
     		}		
