@@ -173,8 +173,10 @@ public class C_For {
 	public void method9() {
 		//사용자한테 입력받은 문자열 출력
 		
+		System.out.print("문자열 입력 > ");
 		String str = sc.nextLine();
-		System.out.print("문자열 입력 > " + str.length());
+		
+		System.out.print("문자열 입력 : " + str.length());
 		
 		for(int i=0; i<=str.length(); i++) {
 			System.out.println(str.charAt(i));

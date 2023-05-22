@@ -100,23 +100,88 @@ public class D_While {
     	  * 
     	  */
     	   	 
-    	 double random = Math.random();
-    	 random = Math.random() * 100 + 1;
-         int num = (int)random;
-         int t = 0;
+    	 double answer = (int)Math.random()*100 + 1;
+//    	 random = Math.random() * 100 + 1;
+    	 
+    	 int input = 0;  
+    	 int count = 0;
+//       int num = (int)random;
+//       int t = 0;
+
 
     	 while(true) {
+    		 count++;
+//    		 t +=1
     		 System.out.print("1과 100사이의 값 입력 >");
-    		 int g = sc.nextInt();	
-    		 t += 1;
+    		 input = sc.nextInt();	
     		 
-    		 if(g < num) {System.out.println("더 큰 수를 입력하세요.");}
-    		 else if(g > num) {System.out.println("더 작은 수를 입력하세요.");}
-    		 else if(g == num) {System.out.println( t +"번 만에 맞혔습니다."); break;}
+    		 if(answer > input) {System.out.println("더 큰 수를 입력하세요.");}
+    		 else if(answer < input) {System.out.println("더 작은 수를 입력하세요.");}
+    		 else {System.out.println( count +"번 만에 맞혔습니다."); break;}
     		 
     		 }
 
     	 }
+     
+     public void method6(){
+    	 
+    	 /*
+    	  * ---------------------------------
+    	  * 1. 예금 | 2. 출금 | 3. 잔고 | 4.종료 
+    	  * ---------------------------------
+    	  * 선택 > 1
+    	  * 잔고 > 5000
+    	  * 
+    	  * ---------------------------------
+    	  * 1. 예금 | 2. 출금 | 3. 잔고 | 4.종료 
+    	  * ---------------------------------
+    	  * 선택 > 2
+    	  * 잔고 > 2000
+    	  * 
+    	  * ---------------------------------
+    	  * 1. 예금 | 2. 출금 | 3. 잔고 | 4.종료 
+    	  * ---------------------------------
+    	  * 선택 > 3
+    	  * 잔고 > 3000
+    	  * 
+    	  * ---------------------------------
+    	  * 1. 예금 | 2. 출금 | 3. 잔고 | 4.종료 
+    	  * ---------------------------------
+    	  * 선택 > 4
+    	  * 프로그램 종료
+    	  */
+    	 
+    	 int balance  = 0;
+    	 boolean run = true;
+    	 
+    	 while(run){
+    	 System.out.println("---------------------------------");
+    	 System.out.println("1. 예금 | 2. 출금 | 3. 잔고 | 4.종료");
+    	 System.out.println("---------------------------------");
+    	 
+    	 System.out.print("선택 > ");
+    	 // Integer.parseInt : Integer 클래스의 parseInt 메소드(문자열 -> 숫자로 인식해주는 메소드)
+    	 // String -> int
+    	 int menu = Integer.parseInt(sc.nextLine());
+    	 
+    	 switch(menu) {
+    	 case 1: System.out.print("예금액 > ");
+    	         balance += Integer.parseInt(sc.nextLine());
+    	         break;
+    	 case 2: System.out.print("출금액 > ");
+    	         balance -= Integer.parseInt(sc.nextLine());
+    	         break;
+    	 case 3: System.out.print("잔고 > ");
+    	         System.out.println(balance);
+    	         break;
+    	 case 4: 
+    		 run = false;
+    		 break; 
+    	 }
+    	 }System.out.print("프로그램 종료");
+    	 }
+    	 
+    
     	 
 
 
@@ -126,7 +191,9 @@ public class D_While {
 //		d.method2();
 //		d.method3();
 //		d.method4();
-		d.method5();
+//		d.method5();
+		d.method6();
+		
 		
 		
 

@@ -44,16 +44,16 @@ class LoopPractice {
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
     	
-//    	int sum1 = 0;
-//    	int sum2 = 0;
-//    	
-//    	for(int i=1; i<=sum1; i+=2) { sum1 += i;
-// 		for(int j=-2; j<=-(sum2); j-=2) {
-// 			sum2 -= j;
-// 			if(sum1+sum2 == 100)continue;
-// 			System.out.println("1부터 " + (sum1+sum2) + "까지의 합계 = 100 ");}
-// 		    System.out.println("\n");}
-//    
+    	int sum1 = 0;
+    	int sum2 = 0;
+    	
+    	for(int i=1; i>=0; i+=2) { sum1 += i;
+ 		for(int j=-2; j<0; j-=2) {
+ 			sum2 -= j;
+ 			if(sum1+sum2 == 100)continue;
+ 			System.out.println("1부터 " + (sum1+sum2) + "까지의 합계 = 100 ");}
+ 		    System.out.println("\n");}
+    
     }
 
     /*
@@ -67,19 +67,19 @@ class LoopPractice {
     public void method3() {
     	
     	
-//    	System.out.print("문자열 : ");
-//    	String a =sc.nextLine();
-//    	
-//    	System.out.print("문자 : ");
-//    	String b =sc.nextLine();
-//    	int t = 0;
-//    	
-//    	for (int i=0; i<=a.length(); i++) {
-//    		
-//    		if(b.equals(a)	 continue;
-//    		t += 1;
-//    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);
-//    		}		
+    	System.out.print("문자열 : ");
+    	String a =sc.nextLine();
+    	
+    	System.out.print("문자 : ");
+    	String b =sc.nextLine();
+    	int t = 0;
+    	
+    	for (int i=0; i<=a.length(); i++) {
+    		
+    		if(b.equals(a)	 continue;
+    		t += 1;
+    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);
+    		}		
     	
 
     }
@@ -97,9 +97,14 @@ class LoopPractice {
     public void method4() {
     	
     	double random = Math.random();
-   	    random = Math.random() * 100 + 1;
-        int num = (int)random;
-
+   	    random = Math.random() * 10 + 1;
+        int num = (int)random; 
+        
+        
+        for(int i=num; i>=0; i--) {
+        	System.out.println(i);
+        }
+        
     }
 
     /*
@@ -114,6 +119,10 @@ class LoopPractice {
 
      */
     public void method5() {
+    	
+    	double random = (int)Math.random()*10 + 1;
+    	
+    	
 
     }
 
