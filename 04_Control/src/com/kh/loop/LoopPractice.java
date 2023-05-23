@@ -72,16 +72,16 @@ class LoopPractice {
     	
     	System.out.print("문자 : ");
     	String b =sc.nextLine();
-    	int t = 0;
+//    	int t = 0;
     	
     	for (int i=0; i<=a.length(); i++) {
     		
-//    		if(b.equals(a)	 continue;
-    		t += 1;
-    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);
+    		if(b.equals(a.length()))continue;
+//    		if(b.equals(a.charAt(i)))continue;
+//    		t += 1;
+    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ i);
     		}		
     	
-
     }
 
     /*

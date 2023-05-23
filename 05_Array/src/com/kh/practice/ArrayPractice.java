@@ -103,6 +103,15 @@ public class ArrayPractice {
 	public void method4() {
 		
 		System.out.print("주민등록번호 : ");
+		String num = sc.nextLine();
+		
+//		int[] num = new ; 
+		
+//		
+//		for 
+		
+		
+		
 		
 		
 //		String user = "";
@@ -141,20 +150,10 @@ public class ArrayPractice {
 		String s = sc.nextLine();
 		String[] a = new String[s.length()];
 		
-		String[] copy = new String[s.length()];
-		
-		String sum = "";
-		
-		for(int i=0; i<a.length; i++) {
-			a[i] = sc.nextLine(); 
-			if() {
-				
-			}
+		for(int i=s.length()-1; i>=0; i--) {
+			System.out.print(s.charAt(i));
 			
-			System.out.print(Arrays.toString(a));
 		}
-			
-			
 		
 	}
 	
@@ -163,8 +162,8 @@ public class ArrayPractice {
 //		a.method1();
 //		a.method2();
 //		a.method3();
-//		a.method4();
-		a.method5();
+		a.method4();
+//		a.method5();
 		
 		
 	}
