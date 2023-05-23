@@ -104,12 +104,20 @@ public class ArrayPractice {
 		
 		System.out.print("주민등록번호 : ");
 		String num = sc.nextLine();
+		int[] a = new int[num.length()];
 		
-//		int[] num = new ; 
+//		Arrays.sort(arr);
 		
-//		
-//		for 
-		
+		for(int i=0; i<num.length(); i++) {
+			   if(i > 7) continue;
+//			for (int j = 0; j < n.length; j++) {
+			
+			{System.out.print(i);}
+//			else{System.out.print("*");}
+			}
+		}
+
+
 		
 		
 		
