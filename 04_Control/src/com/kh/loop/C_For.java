@@ -330,11 +330,11 @@ public class C_For {
 //		c.method2();
 //		c.method3();
 //		c.method4();
-//		c.method5();
+		c.method5();
 //		c.method6();
 //		c.method7();
 //		c.method8();
-		c.method9();
+//		c.method9();
 //		c.method10();
 //		c.method11();
 //		c.method12();

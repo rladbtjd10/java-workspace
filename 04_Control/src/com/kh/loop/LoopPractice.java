@@ -44,17 +44,35 @@ class LoopPractice {
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
     	
-    	int sum1 = 0;
-    	int sum2 = 0;
+    	int sum = 0;
     	
-    	for(int i=1; i>=0; i+=2) { sum1 += i;
- 		for(int j=-2; j<0; j-=2) {
- 			sum2 -= j;
- 			if(sum1+sum2 == 100)continue;
- 			System.out.println("1부터 " + (sum1+sum2) + "까지의 합계 = 100 ");}
- 		    System.out.println("\n");}
+    	for(int i=1; i<100; i+=2) {
+    		System.out.println(i);}
+ 		for(int j=0; j<100; j++) {
+ 			if(j % 2 == 0) continue;
+ 			sum += (-j);
+ 			System.out.println();}
+ 		}
+// 			sum += i+j;
+// 			if(i+j>=100)break;
+ 			
+// 			System.out.println(i + " + " + j + " = " + i + j);}
+// 		    System.out.println("\n");}
     
-    }
+//    int num;
+//    int sum=0;
+//    for(num=1; sum<100; num++){
+//     if(num%2==0){
+//      sum+=(-num);
+//     }else{
+//      sum+=num;
+//     }
+//    }
+//    System.out.println("1+(-2)+3+(-4)+5+...+ 의 총 합이 100이상일 때 해당하는 숫자는?");
+//    System.out.println("총합 " + sum + " 일 때 해당하는 수는 " + num);
+//    }
+    
+//    }
 
     /*
         사용자로부터 문자열을 입력 받고/ 문자열에서 검색될 문자를 입력 받아/ 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요. 
@@ -155,7 +173,7 @@ class LoopPractice {
     public static void main(String[] args) {
     	LoopPractice l = new LoopPractice();
 //    	l.method1();
-//    	l.method2();
+    	l.method2();
 //    	l.method3();
 //    	l.method4();
 //    	l.method5();

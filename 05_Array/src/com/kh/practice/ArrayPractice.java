@@ -104,43 +104,20 @@ public class ArrayPractice {
 		
 		System.out.print("주민등록번호 : ");
 		String num = sc.nextLine();
-		int[] a = new int[num.length()];
+//		char[] a = new char[num.length()];
 		
-//		Arrays.sort(arr);
-		
-		for(int i=0; i<num.length(); i++) {
-			   if(i > 7) continue;
-//			for (int j = 0; j < n.length; j++) {
-			
-			{System.out.print(i);}
-//			else{System.out.print("*");}
+		for (int i=0; i<num.length(); i++) {
+		    if(i >= 8) continue;	
+			{System.out.print(num.charAt(i));}
+		}
+		for(int j=0; j<num.length(); j++) {
+			   if(j > 5) continue;
+			   {System.out.print("*");}
+	   
 			}
+		
 		}
 
-
-		
-		
-		
-		
-//		String user = "";
-//		char[] usercha = null;
-//		System.out.print("주민등록번호 : ");
-//		user = sc.nextLine();
-//		
-//		usercha = new char[user.length()];
-//		System.out.println();
-//		for (int i = 0; i < user.length(); i++) {
-//			usercha[i] = user.charAt(i);
-//		}
-//		for (int i = 0; i < usercha.length; i++) {
-//			if (i > 7) {
-//				System.out.print("*");
-//			} else {
-//​
-//				System.out.print(usercha[i]);
-//			}
-		
-		
 		
 		
 //	}
@@ -171,7 +148,7 @@ public class ArrayPractice {
 //		a.method2();
 //		a.method3();
 		a.method4();
-//		a.method5();
+//		a.merthod5();
 		
 		
 	}
