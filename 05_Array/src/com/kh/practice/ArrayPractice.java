@@ -143,7 +143,7 @@ public class ArrayPractice {
 		
 		
 		
-	}
+//	}
 	
 	/*
 	 * 사용자가 입력한 단어를 거꾸로 뒤집어서 출력하세요. 
