@@ -44,35 +44,19 @@ class LoopPractice {
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
     	
+    	int n = 0;
     	int sum = 0;
     	
-    	for(int i=1; i<100; i+=2) {
-    		System.out.println(i);}
- 		for(int j=0; j<100; j++) {
- 			if(j % 2 == 0) continue;
- 			sum += (-j);
- 			System.out.println();}
+    	for(int i=1; sum<100; i++) {
+    		n++;
+    		if(i % 2 == 0) { sum -= i;} 
+    		else { sum += i;} 
+    		
+    	}
+ 			System.out.println( n + "까지 더하면 총합이 100이상 됩니다");
  		}
-// 			sum += i+j;
-// 			if(i+j>=100)break;
- 			
-// 			System.out.println(i + " + " + j + " = " + i + j);}
-// 		    System.out.println("\n");}
     
-//    int num;
-//    int sum=0;
-//    for(num=1; sum<100; num++){
-//     if(num%2==0){
-//      sum+=(-num);
-//     }else{
-//      sum+=num;
-//     }
-//    }
-//    System.out.println("1+(-2)+3+(-4)+5+...+ 의 총 합이 100이상일 때 해당하는 숫자는?");
-//    System.out.println("총합 " + sum + " 일 때 해당하는 수는 " + num);
-//    }
-    
-//    }
+
 
     /*
         사용자로부터 문자열을 입력 받고/ 문자열에서 검색될 문자를 입력 받아/ 해당 문자열에 그 문자가 몇 개 있는지 개수를 출력하세요. 
@@ -89,16 +73,13 @@ class LoopPractice {
     	String a =sc.nextLine();
     	
     	System.out.print("문자 : ");
-    	String b =sc.nextLine();
-//    	int t = 0;
+    	char b =sc.next().charAt(0);
+    	int t = 0;
     	
     	for (int i=0; i<=a.length(); i++) {
-    		
-    		if(b.equals(a.length()))continue;
-//    		if(b.equals(a.charAt(i)))continue;
-//    		t += 1;
-    		System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ i);
-    		}		
+    		if(a.charAt(i) == b) {
+    		t ++; }
+    		}	System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ i);	
     	
     }
 
@@ -173,8 +154,8 @@ class LoopPractice {
     public static void main(String[] args) {
     	LoopPractice l = new LoopPractice();
 //    	l.method1();
-    	l.method2();
-//    	l.method3();
+//    	l.method2();
+    	l.method3();
 //    	l.method4();
 //    	l.method5();
 //    	l.method6();

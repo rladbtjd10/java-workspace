@@ -1,4 +1,4 @@
-package kh.com.step1;
+package com.kh.step1;
 
 import com.kh.step1.model.Tv;
 
@@ -32,7 +32,7 @@ public class Application {
 	 * - 클래스 이름은 작성 규칙에 따라 대문자로 시작
 	 * - 파일 이름은 반드시 선언된 클래스 이름과 같도록!
 	 * - 접근 제한자는 public, (default) 설정 가능
-	 * -클래슨느 필드(Field), 메소드(Method), 생성자(Constructor)가 정의
+	 * - 클래스는 필드(Field), 메소드(Method), 생성자(Constructor)가 정의
 	 *   추상화(Abstraction),캡슐화(Encapsulation)가 적용 되어야 함
 	 * 
 	 */

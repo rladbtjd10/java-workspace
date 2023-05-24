@@ -11,20 +11,21 @@ public class User {
 	
 
 	
-	public void login() {//로그인
+	public boolean login() {//로그인
+		return false;
 		
 	}
-	public void signUp() {//회원가입
-		
+	public boolean signUp() {//회원가입
+		return false;
 	}
-	public void viewPrifile(){//프로필 보기
-		
+	public User viewPrifile(){//프로필 보기
+		return null; //참조변수는 null이 초기화
 	}
-	public void updateviewPrifile() {//프로필 수정
-		
+	public User updateviewPrifile() {//프로필 수정
+		return null;
 	}
-	public void deleteviewPrifile() {//계정 삭제
-		
+	public boolean deleteviewPrifile() {//계정 삭제
+		return false;
 	}
 	
 	

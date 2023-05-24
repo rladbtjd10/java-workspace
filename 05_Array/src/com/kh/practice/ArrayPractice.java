@@ -107,8 +107,8 @@ public class ArrayPractice {
 //		char[] a = new char[num.length()];
 		
 		for (int i=0; i<num.length(); i++) {
-		    if(i >= 8) continue;	
-			{System.out.print(num.charAt(i));}
+		    if(i >= 8) continue;
+		    {System.out.print(num.charAt(i));}
 		}
 		for(int j=0; j<num.length(); j++) {
 			   if(j > 5) continue;
