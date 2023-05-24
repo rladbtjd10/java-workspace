@@ -76,10 +76,10 @@ class LoopPractice {
     	char b =sc.next().charAt(0);
     	int t = 0;
     	
-    	for (int i=0; i<=a.length(); i++) {
+    	for (int i=0; i<a.length(); i++) {
     		if(a.charAt(i) == b) {
-    		t ++; }
-    		}	System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ i);	
+    		t++; }
+    		}	System.out.println(a + "안에 포함 된 "+ b +"개수 : "+ t);	
     	
     }
 
@@ -118,8 +118,17 @@ class LoopPractice {
 
      */
     public void method5() {
+
     	
-    	double random = (int)Math.random()*10 + 1;
+    	double random = Math.random()*10+1;
+    	int a = (int)random;
+    	
+    	for(int i=1; i<=10; i++) {
+    	     for(int j=1; j<=10; j++ ) {
+    	    	 if(i == j) { a++;}
+    	} System.out.println(i+" : "+ a);
+    	}
+    	
     	
     	
 
@@ -155,9 +164,9 @@ class LoopPractice {
     	LoopPractice l = new LoopPractice();
 //    	l.method1();
 //    	l.method2();
-    	l.method3();
+//    	l.method3();
 //    	l.method4();
-//    	l.method5();
+    	l.method5();
 //    	l.method6();
     }
 
