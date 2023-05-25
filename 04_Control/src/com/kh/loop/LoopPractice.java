@@ -119,17 +119,26 @@ class LoopPractice {
      */
     public void method5() {
 
-    	
-    	double random = Math.random()*10+1;
-    	int a = (int)random;
+//    	double random = (Math.random()*10)+1;
+//    	int a = (int)random;
     	
     	for(int i=1; i<=10; i++) {
-    	     for(int j=1; j<=10; j++ ) {
-    	    	 if(i == j) { a++;}
-    	} System.out.println(i+" : "+ a);
+    	    int d = (int)((Math.random()*6)+1);
+    		{System.out.print(d);}
+    	}
+    	
+    	if() {
+    		
+    	} else if{
+    		
     	}
     	
     	
+
+    	
+    		
+    		
+    		
     	
 
     }
