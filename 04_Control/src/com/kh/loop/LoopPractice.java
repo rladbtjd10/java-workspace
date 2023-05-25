@@ -117,31 +117,26 @@ class LoopPractice {
         6 : 0
 
      */
+    
+
     public void method5() {
-
-//    	double random = (Math.random()*10)+1;
-//    	int a = (int)random;
     	
+    	
+    	int [] count = new int[7];
+    	
+
     	for(int i=1; i<=10; i++) {
-    	    int d = (int)((Math.random()*6)+1);
-    		{System.out.print(d);}
+    		int d = (int)((Math.random()*6)+1);
+    		System.out.println(d);
+    		count[d]++;
     	}
     	
-    	if() {
-    		
-    	} else if{
-    		
-    	}
-    	
-    	
-
-    	
-    		
-    		
-    		
-    	
-
+    	for(int i=1; i<=6; i++) {
+    		System.out.println(i+ ":" + count[i]);
     }
+    }
+ 
+  
 
     /*
         사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 
@@ -166,6 +161,20 @@ class LoopPractice {
         이겼습니다 !
     */
     public void method6() {
+    	
+    	 int input = 0;  
+    	 int count = 0;
+    	 
+    	 while(true) {
+    		 count++;
+    		 System.out.print("가위바위보 : ");
+    		 input = sc.nextInt();	
+    		 
+    		 if(answer > input) {System.out.println("더 큰 수를 입력하세요.");}
+    		 else if(answer < input) {System.out.println("더 작은 수를 입력하세요.");}
+    		 else {System.out.println( count +"번 만에 맞혔습니다."); break;}
+    		 
+    		 }
 
     }
     
