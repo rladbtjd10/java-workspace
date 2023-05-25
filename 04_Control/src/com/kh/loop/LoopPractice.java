@@ -122,12 +122,12 @@ class LoopPractice {
     public void method5() {
     	
     	
-    	int [] count = new int[7];
+    	int [] count = new int[10];
     	
 
     	for(int i=1; i<=10; i++) {
     		int d = (int)((Math.random()*6)+1);
-    		System.out.println(d);
+    		System.out.print(d);
     		count[d]++;
     	}
     	
