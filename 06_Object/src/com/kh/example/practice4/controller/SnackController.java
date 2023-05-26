@@ -2,35 +2,38 @@ package com.kh.example.practice4.controller;
 
 import com.kh.example.practice4.model.Snack;
 
-/*
- * controller : 사용자가 화면에서 요청한 부분을 처리하는 기능 담당
- * 이때 처리 후에 결과를 여기서 출력하는게 아니라 결과값을 다시 view에 반환하여 view에서 처리하도록 해야함
- */
-
 public class SnackController {
 	
-	private Snack s = new Snack();
+	// 멤버변수 -> 보통 모델로 만들어 놓은 클래스!
+	Snack snack = new Snack();
 	
-	public SnackController() {
-		
-	}
+	// 생성자
+	public SnackController() {}
 	
-	//데이터를 setter를 이용해 저장하고 저장 되었다는 결과을 반환 하는 메소드
-	public boolean saveData(Snack s) {
+	//메서드
+	//데이터를 setter를 이용해 저장하고 저장되었다는 결과를 반환하는 메서드
+	public boolean saveData(Snack viewSnack) {
 		
-		this.s.setkind(s.getkind());
-		this.s.setname(s.getname());
-		this.s.setflavor(s.getflavor());
-		this.s.setNumOf(s.getnumOf());
-		this.s.setPrice(s.getprice());
+		// snack은 controller에서 만든 임시 데이터 창고
+		// viewSnack은 Application에서 데이터를 담은 임시 저장 데이터 창고
+		String kind = viewSnack.getKind();
+		snack.setKind(kind);
+		// == snack.setKind(viewSnack.getKind());
+		snack.setName(viewSnack.getName());
+		snack.setFlavor(viewSnack.getFlavor());
+		snack.setNumOf(viewSnack.getNumOf());
+		snack.setPrice(viewSnack.getPrice());
+		
 		
 		return true;
 	}
 	
-	//저장된 데이터를 반환하는 메서드
-	public Snack confirmData() {
-		return this.s;
-	}
 	
+	//controller에 저장된 데이터를 반환하는 메서드
+	public Snack confirmData() {
+		
+		return this.snack;
+//		= return snack;
+	}
 
 }

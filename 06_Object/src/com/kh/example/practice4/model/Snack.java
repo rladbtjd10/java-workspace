@@ -2,15 +2,28 @@ package com.kh.example.practice4.model;
 
 public class Snack {
 	
-	// A/t + Shift + S -> 자동완성 Superclass
-	String kind;
-	String name;
-	String flavor;
-	int numOf;
-	int price;
+	//캡슐화의 원칙에 따라 작성
 	
-	// A/t + Shift + S -> 자동완성 Field -> ...super()클릭
-	public Snack() {}
+	//멤버 변수는 private로!
+	private String kind;
+	private String name;
+	private String flavor;
+	private int numOf;
+	private int price;
+	
+	/*
+	 * 생성자
+	 * 객체 생성할 때 : Snack snack : new Snack();
+	 * 
+	 */
+	//기본생성자
+	public Snack() {
+	
+		
+		
+	}
+	
+	
 	public Snack(String kind, String name, String flavor, int numOf, int price) {
 		this.kind = kind;
 		this.name = name;
@@ -18,46 +31,98 @@ public class Snack {
 		this.numOf = numOf;
 		this.price = price;
 	}
-	
-	// A/t + Shift + S -> 자동완성
-	// get set 뒤에 대문자로 예)getNumOf()
-	public String getkind() {
+
+    /*
+     * Getter / Setter
+     * 
+     * - Getter : 멤버변수의 값을 호출하는 메서드
+     * 
+     *  public 멤버변수에서 지정한 자료형 getXXX() {
+     *   return 멤버변수에서 지정한 자료형에 해당하는 값;
+     *  }
+     *  
+     * - Setter : 멤버변수의 값을 변경시키는 메서드
+     * 
+     *  public void setXXX(멤버변수에서 지정한 자료형 변수명) {
+     *   this.변수명 = 변수명;
+     *   }
+     *   
+     */
+	public String getKind() {
 		return kind;
 	}
-	public void setkind(String kind) {
+
+
+	public void setKind(String kind) {
 		this.kind = kind;
 	}
-	public String getname() {
+
+
+	public String getName() {
 		return name;
 	}
-	public void setname(String name) {
+
+
+	public void setName(String name) {
 		this.name = name;
 	}
-	public String getflavor() {
+
+
+	public String getFlavor() {
 		return flavor;
 	}
-	public void setflavor(String flavor){
+
+
+	public void setFlavor(String flavor) {
 		this.flavor = flavor;
 	}
-	public int getnumOf() {
+
+
+	public int getNumOf() {
 		return numOf;
 	}
+
+
 	public void setNumOf(int numOf) {
 		this.numOf = numOf;
 	}
-	public int getprice() {
+
+
+	public int getPrice() {
 		return price;
 	}
+
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	// A/t + Shift + S -> 자동완성
+
+    /*
+     * 모든 클래스의 가장 최상위 클래스 : Object
+     * 즉, 모든 클래스는 Object 클래스를 부모 클래스 "상속" 받아서 사용하고 있음
+     * toString은 Object가 가지고 잇는 메서드
+     *      -> 부모 클래스가 가지고 있는 메서드는 전부 사용가능!
+     * @Override : 부모 클래스의 메서드를 재정의 하는것!  (주소값이 나오는 걸 다른형태로 바꾸는 것)   
+     */
 	
 	@Override
 	public String toString() {
 		return "Snack [kind=" + kind + ", name=" + name + ", flavor=" + flavor + ", numOf=" + numOf + ", price=" + price
 				+ "]";
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

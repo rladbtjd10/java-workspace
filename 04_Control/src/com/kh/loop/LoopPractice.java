@@ -122,7 +122,7 @@ class LoopPractice {
     public void method5() {
     	
     	
-    	int [] count = new int[10];
+    	int [] count = new int[7];
     	
 
     	for(int i=1; i<=10; i++) {
@@ -132,7 +132,7 @@ class LoopPractice {
     	}
     	
     	for(int i=1; i<=6; i++) {
-    		System.out.println(i+ ":" + count[i]);
+    		System.out.println(i + ":" + count[i]);
     }
     }
  
@@ -164,6 +164,9 @@ class LoopPractice {
     	
     	 int input = 0;  
     	 int count = 0;
+    	 
+    	 System.out.print("당신의 이름을 입력해주세요 : ");
+    	 String name = sc.nextLine();
     	 
     	 while(true) {
     		 count++;
