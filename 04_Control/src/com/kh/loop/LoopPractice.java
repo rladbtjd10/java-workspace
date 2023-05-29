@@ -139,12 +139,13 @@ class LoopPractice {
   
 
     /*
-        사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 
+        사용자의 이름을 입력하고/ 컴퓨터와 가위바위보를 하세요. 
         컴퓨터가 가위인지 보인지 주먹인지는 랜덤한 수를 통해서 결정하도록 하고, 사용자에게는 직접 가위바위보를 받으세요.
         사용자가 이겼을 때 반복을 멈추고 몇 번 이기고 몇 번 비기고 몇 번 졌는지 출력하세요.
 
 
         당신의 이름을 입력해주세요 : 
+        
         가위바위보 : 가위
         컴퓨터 : 가위
         박신우 : 가위
@@ -163,21 +164,37 @@ class LoopPractice {
     public void method6() {
     	
     	 int input = 0;  
-    	 int count = 0;
+    	 int count1 = 0;
+    	 int count2 = 0;
+    	 int count3 = 0;
     	 
     	 System.out.print("당신의 이름을 입력해주세요 : ");
     	 String name = sc.nextLine();
     	 
-    	 while(true) {
-    		 count++;
+//    	 int random = (int)(Math.random()*3)+1;
+    	 
+    	 boolean check = true;
+    	 
+    	 while(check) {
+ 
     		 System.out.print("가위바위보 : ");
-    		 input = sc.nextInt();	
+    		 String input1 = sc.nextLine();	
     		 
-    		 if(answer > input) {System.out.println("더 큰 수를 입력하세요.");}
-    		 else if(answer < input) {System.out.println("더 작은 수를 입력하세요.");}
-    		 else {System.out.println( count +"번 만에 맞혔습니다."); break;}
+    		 int random = (int)(Math.random()*3)+1;
+    		 
+    		 if(random == 1 && "가위".equals(input1)) {
+    		 System.out.println("컴퓨터 : "+ "가위");
+    		 System.out.println(name + " : " + input1); 
+    		 System.out.println("비겼습니다."); count1++;}
+    		 else if("바위".equals(input1)) {System.out.println(name + " : " + input1); System.out.println("이겼습니다."); count2++;}
+    		 else {System.out.println(name + " : " + input1); System.out.println("졌습니다."); count3++; break;}
     		 
     		 }
+    	 
+    	 
+    	 System.out.println(count1++);
+    	 System.out.println(count2++);
+    	 System.out.println(count3++);
 
     }
     
@@ -187,8 +204,8 @@ class LoopPractice {
 //    	l.method2();
 //    	l.method3();
 //    	l.method4();
-    	l.method5();
-//    	l.method6();
+//    	l.method5();
+    	l.method6();
     }
 
 }
