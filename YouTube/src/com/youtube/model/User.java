@@ -9,6 +9,8 @@ public class User {
     private String nickName;
     private char gender;
     
+    Video video; //포함관계 사용자가 비디오를 가질수 있다.
+    
 	public User() { //
 	}
 
