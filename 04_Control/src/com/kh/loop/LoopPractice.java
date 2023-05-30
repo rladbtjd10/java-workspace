@@ -93,14 +93,15 @@ class LoopPractice {
         4
         0
      */
+    
+    // 4번 문제는 랜덤값 현재 범위가 1~10까지로 되어 있는 상태! 0~10까지로 변경해주세요! 해당 랜덤값도 계속 바뀌어야 하므로 for문안에 있어야 해요!
     public void method4() {
-    	
-    	double random = Math.random();
-   	    random = Math.random() * 10 + 1;
-        int num = (int)random; 
-        
+    
         
         for(int i=num; i>=0; i--) {
+       	    int num = (int)(Math.random() * 10);
+           
+            
         	System.out.println(i);
         }
         
@@ -139,13 +140,12 @@ class LoopPractice {
   
 
     /*
-        사용자의 이름을 입력하고/ 컴퓨터와 가위바위보를 하세요. 
+        사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 
         컴퓨터가 가위인지 보인지 주먹인지는 랜덤한 수를 통해서 결정하도록 하고, 사용자에게는 직접 가위바위보를 받으세요.
-        사용자가 이겼을 때 반복을 멈추고 몇 번 이기고 몇 번 비기고 몇 번 졌는지 출력하세요.
+        사용자가 이겼을 때 반복을 멈추고/ 몇 번 이기고 몇 번 비기고 몇 번 졌는지 출력하세요.
 
 
         당신의 이름을 입력해주세요 : 
-        
         가위바위보 : 가위
         컴퓨터 : 가위
         박신우 : 가위
@@ -161,17 +161,17 @@ class LoopPractice {
         박신우 : 보
         이겼습니다 !
     */
+    
+    //6번 문제는 조건식에서 중복되는 부분들 있잖아요! 중첩 if문으로 중복되는 것들 밖으로 뺀다고 생각하시면 돼요!  ->해결!
     public void method6() {
     	
-    	 int input = 0;  
     	 int count1 = 0;
     	 int count2 = 0;
     	 int count3 = 0;
     	 
     	 System.out.print("당신의 이름을 입력해주세요 : ");
     	 String name = sc.nextLine();
-    	 
-//    	 int random = (int)(Math.random()*3)+1;
+
     	 
     	 boolean check = true;
     	 
@@ -180,32 +180,35 @@ class LoopPractice {
     		 System.out.print("가위바위보 : ");
     		 String input1 = sc.nextLine();	
     		 
-    		 int random = (int)(Math.random()*3)+1;
+    		 int random = (int)(Math.random()*3+1);
     		 
-    		 if(random == 1 && "가위".equals(input1)) {
-    		 System.out.println("컴퓨터 : "+ "가위");
-    		 System.out.println(name + " : " + input1); 
-    		 System.out.println("비겼습니다."); count1++;}
-    		 else if("바위".equals(input1)) {System.out.println(name + " : " + input1); System.out.println("이겼습니다."); count2++;}
-    		 else {System.out.println(name + " : " + input1); System.out.println("졌습니다."); count3++; break;}
+    		 if(random == 1) {if ("가위".equals(input1)) {System.out.println("컴퓨터 : "+ "가위"); System.out.println(name + " : " + input1); System.out.println("비겼습니다."); count1++;}
+    		 else if("보".equals(input1)){System.out.println("컴퓨터 : "+ "가위"); System.out.println(name + " : " + input1); System.out.println("졌습니다."); count3++;}
+    		 else if("바위".equals(input1)) {System.out.println("컴퓨터 : "+ "가위");System.out.println(name + " : " + input1); System.out.println("이겼습니다."); count2++; break;}}
     		 
-    		 }
-    	 
-    	 
-    	 System.out.println(count1++);
-    	 System.out.println(count2++);
-    	 System.out.println(count3++);
+    		 if(random == 2) {if("바위".equals(input1)) {System.out.println("컴퓨터 : "+ "바위"); System.out.println(name + " : " + input1); System.out.println("비겼습니다."); count1++;}
+        	 else if("가위".equals(input1)){System.out.println("컴퓨터 : "+ "바위"); System.out.println(name + " : " + input1); System.out.println("졌습니다."); count3++;}
+        	 else if("보".equals(input1)) {System.out.println("컴퓨터 : "+ "바위"); System.out.println(name + " : " + input1); System.out.println("이겼습니다."); count2++; break;}}
+    		 
+        	 if(random == 3) {if("보".equals(input1)) {System.out.println("컴퓨터 : "+ "보"); System.out.println(name + " : " + input1);System.out.println("비겼습니다."); count1++;}
+        	 else if("바위".equals(input1)){System.out.println("컴퓨터 : "+ "보"); System.out.println(name + " : " + input1); System.out.println("졌습니다."); count3++;}
+        	 else if("가위".equals(input1)) {System.out.println("컴퓨터 : "+ "보"); System.out.println(name + " : " + input1); System.out.println("이겼습니다."); count2++; break;}}
+    		
+    	 }
+        	 System.out.println(count2++ + "번이기고, " + count1++ + "번비기고, " + count3++ + "번졌습니다.");
+
 
     }
+    
     
     public static void main(String[] args) {
     	LoopPractice l = new LoopPractice();
 //    	l.method1();
 //    	l.method2();
 //    	l.method3();
-//    	l.method4();
+    	l.method4();
 //    	l.method5();
-    	l.method6();
+//    	l.method6();
     }
 
 }
