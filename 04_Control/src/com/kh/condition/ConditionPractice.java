@@ -15,24 +15,27 @@ public class ConditionPractice {
        양수만 입력해주세요.
      */
 	
-//	1번 문제는 이대로도 정답이라 할 수 있지만 보완하자면 홀수도 양수인 조건이 필요해요! 중첩 if문 사용해보는 것 추천!
+//	1번 문제는 이대로도 정답이라 할 수 있지만 보완하자면 홀수도 양수인 조건이 필요해요! 중첩 if문 사용해보는 것 추천!  ->수정완료!
     public void practice1() {
     	
     	System.out.print("숫자 한 개 입력하세요 : ");
     	int a = sc.nextInt();
     	
-        if(a % 2 == 0 && a > 0) {
-			System.out.println("짝수다");
-		} if(a % 2 == 1) {
-			System.out.println("홀수다");
-		} if(a < 0) {
-			System.out.println("양수만 입력해주세요.");
-		}
+    	if(a > 0) { if(a % 2 == 0) {System.out.println("짝수다");}
+                    else {System.out.println("홀수다");} }
+        else {System.out.println("양수만 입력해주세요.");}
+    	
+//        if(a % 2 == 0 && a > 0) {
+//			System.out.println("짝수다");
+//		} if(a % 2 == 1) {
+//			System.out.println("홀수다");
+//		} if(a < 0) {
+//			System.out.println("양수만 입력해주세요.");
+//		}
 		
-    }
 		
-
-
+	}
+		
     /*
         정수 num1과 num2가 매개변수로 주어진다. 두 수가 같으면 1 다르면 -1을 출력하세요.
 
@@ -113,7 +116,7 @@ public class ConditionPractice {
         축하합니다, 합격입니다!
      */
     
-//    4번 문제는 조건식이 같은 애들이 이렇게 짜고 보니 보이잖아요! if문 하나로 그 안에 다 넣는 방식으로 수정해보세요!
+//    4번 문제는 조건식이 같은 애들이 이렇게 짜고 보니 보이잖아요! if문 하나로 그 안에 다 넣는 방식으로 수정해보세요! ->수정완료!
     public void practice4() {
     	
     	System.out.print("국어점수 : ");
@@ -128,13 +131,22 @@ public class ConditionPractice {
     	int i = a+b+c;
     	int j = i / 3;
     	
-    	if(a >= 40 && j >= 60) { System.out.println("국어 : " + a);}
-    	if(b >= 40 && j >= 60) { System.out.println("수학 : " + b);}
-    	if(c >= 40 && j >= 60) { System.out.println("영어 : " + c);}
-    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("합계 : " + i);}
-    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.printf("평균 : " + "%.1f \n" , (double)j);}
-    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("축하합니다, 합격입니다!");}
+    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { 
+    	 System.out.println("국어 : " + a);
+    	 System.out.println("수학 : " + b);
+    	 System.out.println("영어 : " + c);
+    	 System.out.println("합계 : " + i);
+    	 System.out.printf("평균 : " + "%.1f \n" , (double)j);
+    	 System.out.println("축하합니다, 합격입니다!");}
     	else { System.out.println("불합격입니다.");}
+    	
+//    	if(a >= 40 && j >= 60) { System.out.println("국어 : " + a);}
+//    	if(b >= 40 && j >= 60) { System.out.println("수학 : " + b);}
+//    	if(c >= 40 && j >= 60) { System.out.println("영어 : " + c);}
+//    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("합계 : " + i);}
+//    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.printf("평균 : " + "%.1f \n" , (double)j);}
+//    	if(a >= 40 && b >= 40 && c >= 40 && j >= 60) { System.out.println("축하합니다, 합격입니다!");}
+//    	else { System.out.println("불합격입니다.");}
     	  	
       }
 
@@ -146,7 +158,7 @@ public class ConditionPractice {
         464,000
      */
     
-//    5번 문제는 50만 원 이상이거나 10만원 미만일 때 등 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! 이것 꼭 시도해보세요!
+//    5번 문제는 50만 원 이상이거나 10만원 미만일 때 등 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! 이것 꼭 시도해보세요! ->수정완료!
     public void practice5() {
     	
     	System.out.print("구매한 옷 가격 : ");
@@ -155,13 +167,17 @@ public class ConditionPractice {
     	double b = a * 0.05;
     	double c = a * 0.1;
     	double d = a * 0.2;
-
-    	if(a >= 100000 && a < 300000) {System.out.println(a - (int)b);}
-    	else if(a >= 300000 && a < 500000) {System.out.println(a - (int)c);}
-    	else if(a >= 500000) {System.out.println(a - (int)d);}
+    	
+    	if(a >= 500000) {System.out.println(a - (int)d);}
+    	else if(a >= 300000) {System.out.println(a - (int)c);}
+    	else if(a >= 100000) {System.out.println(a - (int)b);}
     	else {System.out.println(a);}
 
-    }
+//    	if(a >= 100000 && a < 300000) {System.out.println(a - (int)b);}
+//    	else if(a >= 300000 && a < 500000) {System.out.println(a - (int)c);}
+//    	else if(a >= 500000) {System.out.println(a - (int)d);}
+//    	else {System.out.println(a);}
+    	}
 
 
     /*
@@ -171,7 +187,7 @@ public class ConditionPractice {
     
 //	  6번 문제는 각각의 if문들을 이제 if ~ else if 문으로!
 //    사실 if문 만으로 해결되는데 if ~ else if ~ else 문 등이 나온 건 이 방식을 사용하면 if문 한개로 해결 되는데,
-//    지금처럼 각각의 if문으로만 작성하면 if문이 4개라는 것! 이러면 지금은 짧은 코드지만 길어질 때 코드 성능 차이가 생깁니다.
+//    지금처럼 각각의 if문으로만 작성하면 if문이 4개라는 것! 이러면 지금은 짧은 코드지만 길어질 때 코드 성능 차이가 생깁니다.      ->수정완료!
 //    그러니 꼭 변경해보세요!
 	public void practice6() {
     	
@@ -179,11 +195,10 @@ public class ConditionPractice {
     	int a = sc.nextInt();
     	
     	if(a > 0 && a < 90) {System.out.print(1);}
-    	if(a == 90) {System.out.print(2);}
-    	if(a > 90 && a < 180) {System.out.print(3);}
-    	if(a == 180) {System.out.print(4);}
-    	
-    }
+    	else if(a == 90) {System.out.print(2);}
+    	else if(a > 90 && a < 180) {System.out.print(3);}
+    	else if(a == 180) {System.out.print(4);}
+}
 
     /*
       아이디, 비밀번호를 정해두고 로그인 기능을 작성하세요.
@@ -234,7 +249,7 @@ public class ConditionPractice {
 
      */
     
-//    8번 문제는 5번 문제와 피드백이 동일해요!
+//    8번 문제는 5번 문제와 피드백이 동일해요! 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요!  ->수정완료!
 	public void practice8() {
     	
     	System.out.print("키(m)를 입력해 주세요: ");
@@ -246,15 +261,19 @@ public class ConditionPractice {
     	double bmi = b / (a * a); 
     	System.out.println(bmi);
     	
-    	if(bmi < 18.5) {System.out.println("저체중");}
-    	if(bmi >= 18.5 && bmi < 23) {System.out.println("정상체중");}
-    	if(bmi >= 23 && bmi < 25) {System.out.println("과체중");}
-    	if(bmi >= 25 && bmi < 30) {System.out.println("비만");}
     	if(bmi >= 30) {System.out.println("고도 비만");}
+    	else if(bmi >= 25) {System.out.println("비만");}
+    	else if(bmi >= 23) {System.out.println("과체중");}
+    	else if(bmi >= 18.5) {System.out.println("정상체중");}
+    	else {System.out.println("저체중");}
     	
+//    	if(bmi < 18.5) {System.out.println("저체중");}
+//    	if(bmi >= 18.5 && bmi < 23) {System.out.println("정상체중");}
+//    	if(bmi >= 23 && bmi < 25) {System.out.println("과체중");}
+//    	if(bmi >= 25 && bmi < 30) {System.out.println("비만");}
+//    	if(bmi >= 30) {System.out.println("고도 비만");}
     	
-       
-    }
+    	}
 
     /*
         키보드로 두 개의 양수와 연산 기호를 입력 받아 연산 기호에 맞춰 연산 결과를 출력하세요.
@@ -280,13 +299,20 @@ public class ConditionPractice {
     	System.out.print("연산자를 입력(+,-,*,/,%) : ");
     	String c = sc.next();
     	
-    	
-    	if(c.equals("+") && a>0 && b>0 ){System.out.println(a +"+"+ b +"="+ (a+b));}
-    	else if(c.equals("-") && a>0 && b>0 ){System.out.println(a +"-"+b+"="+ (a-b));}
-    	else if(c.equals("*") && a>0 && b>0 ){System.out.println(a +"*"+ b +"="+ (a*b));}
-    	else if(c.equals("/") && a>0 && b>0 ){System.out.println(a +"/"+ b +"="+ (a/b));}
-    	else if(c.equals("%") && a>0 && b>0 ){System.out.println(a +"%"+ b +"="+ (a%b));}
+    	if(a>0 && b>0) { if(c.equals("+")){System.out.println(a +"+"+ b +"="+ (a+b));}
+    	                else if(c.equals("-")){System.out.println(a +"-"+b+"="+ (a-b));}
+    	                else if(c.equals("*")){System.out.println(a +"*"+ b +"="+ (a*b));}
+    	                else if(c.equals("/")){System.out.println(a +"/"+ b +"="+ (a/b));}
+    	                else if(c.equals("%")){System.out.println(a +"%"+ b +"="+ (a%b));}}
     	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
+    	
+//    	if(c.equals("+") && a>0 && b>0 ){System.out.println(a +"+"+ b +"="+ (a+b));}
+//    	else if(c.equals("-") && a>0 && b>0 ){System.out.println(a +"-"+b+"="+ (a-b));}
+//    	else if(c.equals("*") && a>0 && b>0 ){System.out.println(a +"*"+ b +"="+ (a*b));}
+//    	else if(c.equals("/") && a>0 && b>0 ){System.out.println(a +"/"+ b +"="+ (a/b));}
+//    	else if(c.equals("%") && a>0 && b>0 ){System.out.println(a +"%"+ b +"="+ (a%b));}
+//    	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
+    	
     }
 
     /*
@@ -302,7 +328,8 @@ public class ConditionPractice {
         조회 메뉴입니다.
      */
 	
-//	10번 문제도 위에 5번과 8번 문제와 피드백이 동일한데요~ 여긴 이외에도 switch문 사용해보는 것도 추천드려요!
+//	10번 문제도 위에 5번과 8번 문제와 피드백이 동일한데요~ 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! 
+//	여긴 이외에도 switch문 사용해보는 것도 추천드려요!
 	public void practice10() {
 
     	System.out.println("1. 입력");
@@ -319,6 +346,12 @@ public class ConditionPractice {
     	if(3 == a) {System.out.println("조회 메뉴입니다.");}
     	if(4 == a) {System.out.println("삭제 메뉴입니다.");}
     	if(9 == a) {System.out.println("종료 메뉴입니다.");}
+    	
+    	boolean b = true;
+    	
+    	switch(b) {
+    	
+    	}
     	
     	
     }
@@ -409,7 +442,7 @@ public class ConditionPractice {
     public static void main(String[] args) {
 		
     	ConditionPractice cp  = new ConditionPractice();
-    	cp.practice1();
+//    	cp.practice1();
 //    	cp.practice2();
 //    	cp.practice3();
 //    	cp.practice4();
@@ -418,7 +451,7 @@ public class ConditionPractice {
 //    	cp.practice7();
 //    	cp.practice8();
 //    	cp.practice9();
-//    	cp.practice10();
+    	cp.practice10();
 //    	cp.practice11();
     	
     }
