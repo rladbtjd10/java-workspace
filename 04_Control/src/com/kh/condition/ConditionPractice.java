@@ -287,7 +287,7 @@ public class ConditionPractice {
 
      */
 	
-//	9번 문제는 조건식에서 공통적으로 들어가는 부분을 중첩 if문 사용해보세요!
+//	9번 문제는 조건식에서 공통적으로 들어가는 부분을 중첩 if문 사용해보세요!  ->수정완료!
 	public void practice9() {
     	
     	System.out.print("피연산자1 입력 : ");
@@ -303,7 +303,8 @@ public class ConditionPractice {
     	                else if(c.equals("-")){System.out.println(a +"-"+b+"="+ (a-b));}
     	                else if(c.equals("*")){System.out.println(a +"*"+ b +"="+ (a*b));}
     	                else if(c.equals("/")){System.out.println(a +"/"+ b +"="+ (a/b));}
-    	                else if(c.equals("%")){System.out.println(a +"%"+ b +"="+ (a%b));}}
+    	                else if(c.equals("%")){System.out.println(a +"%"+ b +"="+ (a%b));}
+    	                else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	}
     	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
     	
 //    	if(c.equals("+") && a>0 && b>0 ){System.out.println(a +"+"+ b +"="+ (a+b));}
@@ -328,8 +329,8 @@ public class ConditionPractice {
         조회 메뉴입니다.
      */
 	
-//	10번 문제도 위에 5번과 8번 문제와 피드백이 동일한데요~ 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! 
-//	여긴 이외에도 switch문 사용해보는 것도 추천드려요!
+//	10번 문제도 위에 5번과 8번 문제와 피드백이 동일한데요~ 순차적으로 조건식을 걸어볼 수 있는대로 하면 조건식이 확 줄어들거에요! ->수정완료!
+//	여긴 이외에도 switch문 사용해보는 것도 추천드려요!  ->작성완료!
 	public void practice10() {
 
     	System.out.println("1. 입력");
@@ -341,19 +342,22 @@ public class ConditionPractice {
     	System.out.print("메뉴 번호를 입력하세요: ");
     	int a = sc.nextInt();
     	
-    	if(1 == a) {System.out.println("입력 메뉴입니다.");}
-    	if(2 == a) {System.out.println("수정 메뉴입니다.");}
-    	if(3 == a) {System.out.println("조회 메뉴입니다.");}
-    	if(4 == a) {System.out.println("삭제 메뉴입니다.");}
-    	if(9 == a) {System.out.println("종료 메뉴입니다.");}
-    	
-    	boolean b = true;
-    	
-    	switch(b) {
-    	
+    	switch(a) { 
+    	case 1 : System.out.println("입력 메뉴입니다."); break;
+    	case 2 : System.out.println("수정 메뉴입니다."); break;
+    	case 3 : System.out.println("조회 메뉴입니다."); break;
+    	case 4 : System.out.println("삭제 메뉴입니다."); break;
+    	case 9 : System.out.println("프로그램이 종료됩니다."); break;
+    	default : System.out.println("잘못된 메뉴 번호입니다."); 
     	}
     	
-    	
+    	if(1 == a) {System.out.println("입력 메뉴입니다.");}
+    	else if(2 == a) {System.out.println("수정 메뉴입니다.");}
+    	else if(3 == a) {System.out.println("조회 메뉴입니다.");}
+    	else if(4 == a) {System.out.println("삭제 메뉴입니다.");}
+    	else if(9 == a) {System.out.println("프로그램이 종료됩니다.");}
+    	else {System.out.println("잘못된 메뉴 번호입니다.");}
+
     }
 
     /*
@@ -384,7 +388,7 @@ public class ConditionPractice {
         과제 점수 : 60
         출석 회수 : 18
         ===========결과==========
-        FAIL [점수 미달] (총점 61.0)
+        FAIL [점수 미달] (총점 56.0)
 
         중간 고사 점수 : 90
         기말 고사 점수 : 100
@@ -403,7 +407,7 @@ public class ConditionPractice {
 
      */
 	
-//	11번 문제도 피드백 동일!
+//	11번 문제도 피드백 동일!  ->수정완료!
     public void practice11() {
     	
     	System.out.print("중간 고사 점수 : ");
@@ -427,14 +431,23 @@ public class ConditionPractice {
     	
     	double total = (a+b+c)/3;
     	
-    	if(total>=70 && h>=14) {System.out.printf("중간 고사 점수(20) : " + "%.1f",(float)i);}
-    	if(total>=70 && h>=14) {System.out.printf("\n기말 고사 점수(30) : " + "%.1f",(float)j);}
-    	if(total>=70 && h>=14) {System.out.printf("\n과제 점수 (30) : " + "%.1f",(float)k);}
-    	if(total>=70 && h>=14) {System.out.printf("\n출석 점수 (20): " + "%.1f",(float)h);}
-    	if(total>=70 && h>=14) {System.out.printf("\n총점 : " + "%.1f",(float)total);}
-        if(total>=70 && h>=14) {System.out.printf("\nPASS");}
-        if(total<70) {System.out.printf(" FAIL [점수 미달] (총점 "+"%.1f"+")", (float)total);}
-    	if(h < 14) {System.out.printf("\n FAIL [출석 횟수 부족] ("+"%d"+"/20)", d);}
+    	if(total>=70 && h>=14) { {System.out.printf("중간 고사 점수(20) : " + "%.1f",(float)i);}
+    	                       {System.out.printf("\n기말 고사 점수(30) : " + "%.1f",(float)j);}
+    	                       {System.out.printf("\n과제 점수 (30) : " + "%.1f",(float)k);}
+    	                       {System.out.printf("\n출석 점수 (20): " + "%.1f",(float)h);}
+    	                       {System.out.printf("\n총점 : " + "%.1f",(float)total);}
+                               {System.out.printf("\nPASS");} }
+    	if(total<70) {System.out.printf(" FAIL [점수 미달] (총점 "+"%.1f"+")\n", (float)total);}
+    	if(h < 14) {System.out.printf(" FAIL [출석 횟수 부족] ("+"%d"+"/20)", d);}
+    	
+//    	if(total>=70 && h>=14) {System.out.printf("중간 고사 점수(20) : " + "%.1f",(float)i);}
+//    	if(total>=70 && h>=14) {System.out.printf("\n기말 고사 점수(30) : " + "%.1f",(float)j);}
+//    	if(total>=70 && h>=14) {System.out.printf("\n과제 점수 (30) : " + "%.1f",(float)k);}
+//    	if(total>=70 && h>=14) {System.out.printf("\n출석 점수 (20): " + "%.1f",(float)h);}
+//    	if(total>=70 && h>=14) {System.out.printf("\n총점 : " + "%.1f",(float)total);}
+//      if(total>=70 && h>=14) {System.out.printf("\nPASS");}
+//      if(total<70) {System.out.printf(" FAIL [점수 미달] (총점 "+"%.1f"+")", (float)total);}
+//    	if(h < 14) {System.out.printf("\n FAIL [출석 횟수 부족] ("+"%d"+"/20)", d);}
     
     	
     }
@@ -451,8 +464,8 @@ public class ConditionPractice {
 //    	cp.practice7();
 //    	cp.practice8();
 //    	cp.practice9();
-    	cp.practice10();
-//    	cp.practice11();
+//    	cp.practice10();
+    	cp.practice11();
     	
     }
 }
