@@ -94,15 +94,12 @@ class LoopPractice {
         0
      */
     
-    // 4번 문제는 랜덤값 현재 범위가 1~10까지로 되어 있는 상태! 0~10까지로 변경해주세요! 해당 랜덤값도 계속 바뀌어야 하므로 for문안에 있어야 해요!
+    // 4번 문제는 랜덤값 현재 범위가 1~10까지로 되어 있는 상태! 0~10까지로 변경해주세요! 해당 랜덤값도 계속 바뀌어야 하므로 for문안에 있어야 해요! ->수정완료!
     public void method4() {
     
         
-        for(int i=num; i>=0; i--) {
-       	    int num = (int)(Math.random() * 10);
-           
-            
-        	System.out.println(i);
+        for(int i=(int)(Math.random() * 10); i>=0; i--) {
+       	    System.out.println(i);
         }
         
     }
@@ -162,7 +159,7 @@ class LoopPractice {
         이겼습니다 !
     */
     
-    //6번 문제는 조건식에서 중복되는 부분들 있잖아요! 중첩 if문으로 중복되는 것들 밖으로 뺀다고 생각하시면 돼요!  ->해결!
+    //6번 문제는 조건식에서 중복되는 부분들 있잖아요! 중첩 if문으로 중복되는 것들 밖으로 뺀다고 생각하시면 돼요!  ->수정완료!
     public void method6() {
     	
     	 int count1 = 0;
