@@ -304,8 +304,13 @@ public class ConditionPractice {
     	                else if(c.equals("*")){System.out.println(a +"*"+ b +"="+ (a*b));}
     	                else if(c.equals("/")){System.out.println(a +"/"+ b +"="+ (a/b));}
     	                else if(c.equals("%")){System.out.println(a +"%"+ b +"="+ (a%b));}
-    	                else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	}
-    	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
+    	                else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}
+    	                }
+    	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	}
+    	
+    	// --> 혹시나 잘못 입력하였습니다도 한 번만 출력되게끔 하고 싶다면
+    			// 먼저 잘못 입력하셨습니다. 이 부분을 조건 걸어버리고
+    			// 나머지를 else문 안에 작성하는 것도 추천!
     	
 //    	if(c.equals("+") && a>0 && b>0 ){System.out.println(a +"+"+ b +"="+ (a+b));}
 //    	else if(c.equals("-") && a>0 && b>0 ){System.out.println(a +"-"+b+"="+ (a-b));}
@@ -463,9 +468,9 @@ public class ConditionPractice {
 //    	cp.practice6();
 //    	cp.practice7();
 //    	cp.practice8();
-//    	cp.practice9();
+    	cp.practice9();
 //    	cp.practice10();
-    	cp.practice11();
+//    	cp.practice11();
     	
     }
 }
