@@ -64,7 +64,7 @@ public class LibraryController {
 			if(cookBook.isCoupon()) {
 				member.setCookCoupon(member.getCookCoupon() + 1);
 			}
-			member.setBook(selectBook);
+			member.setBook(selectBook); //마이페이지에 대여한 책이름 추가하는 것
 			return true;
 		}
 		//if ~ else, instanceof
