@@ -319,7 +319,7 @@ public class ConditionPractice {
 //    	else if(c.equals("%") && a>0 && b>0 ){System.out.println(a +"%"+ b +"="+ (a%b));}
 //    	else {System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");}	
     	
-    }
+//    }
 
     /*
       아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 “OO메뉴입니다“를,
