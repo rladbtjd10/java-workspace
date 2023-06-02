@@ -2,30 +2,33 @@ package com.youtube.controller;
 
 import com.youtube.model.Video;
 
-public class VideoController implements VideoControllerImpl {
+public class VideoController {
 
-	@Override
-	public Video upload() {
-		return null;
+	Video[] videoList = new Video[5];
+	int index = 0;
+
+	
+	public Video upload(Video video) { //영상 업로드
+		return videoList[index++] = video;
 	}
 
-	@Override
-	public Video[] VideoList() {
-		return null;
+	
+	public Video[] VideoList() { //동영상 목록
+		return videoList;
 	}
 
-	@Override
-	public Video viewVideo() {
-		return null;
+	
+	public Video viewVideo(int index) { // 동영상 1개 보기
+		return videoList[index];
 	}
 
-	@Override
-	public Video updateVideo() {
-		return null;
+	
+	public Video updateVideo(int index, Video video) { //동영상 업데이트
+		return videoList[index] = video;
 	}
 
-	@Override
-	public boolean deleteVideo() {
+	
+	public boolean deleteVideo() { //동영상 삭제
 		return false;
 	}
 	
