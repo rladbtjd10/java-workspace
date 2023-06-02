@@ -106,7 +106,7 @@ public class OperatorPractice {
 		int c = a / b;
 	    int result = (a % b == 0) ? c : ++c;	
 	    
-	    c+((a % b == 0)) ? 0 : 1;)
+	    c = ((a % b == 0) ? 0 : 1);
 		System.out.print("필요한 바구니의 수 : " + result);
 		
 		

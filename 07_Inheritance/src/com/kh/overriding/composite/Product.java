@@ -1,4 +1,4 @@
-package com.kh.composite;
+package com.kh.overriding.composite;
 
 //3개의 클래스 모두 공통적으로 가지고 있는 멤버변수만 주출하여 부모 클래스로 만든다.
 
