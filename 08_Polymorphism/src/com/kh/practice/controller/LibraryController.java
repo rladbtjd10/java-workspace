@@ -55,11 +55,12 @@ public class LibraryController {
 		
 		if(selectBook instanceof AniBook) { //만화책인 경우
 			AniBook aniBook = (AniBook) selectBook;
-			if(aniBook.getAccessAge() > member.getAge()) {
-				return false;
-			}
+			if(aniBook.getAccessAge() < member.getAge()) {
+				member.setBook(selectBook); //마이페이지에 대여한 책이름 추가하는 것
+				return true;
+			} 
 			
-		else if(selectBook instanceof AniBook) { //요리책인 경우
+		}else if(selectBook instanceof CookBook) { //요리책인 경우
 			CookBook cookBook = (CookBook) selectBook;
 			if(cookBook.isCoupon()) {
 				member.setCookCoupon(member.getCookCoupon() + 1);
@@ -71,8 +72,7 @@ public class LibraryController {
 		//만화책인 경우 : getAccessAge(), getAge()
 		
 		//요리책인 경우 : isCoupon(), setCookCoupon(), getCookCoupon()
-		
+		 return false;
 		}
 		
 	}
-}
