@@ -1,4 +1,4 @@
-package com.kh.composite;
+package com.kh.overriding.composite;
 
 /*
  * 클래스 간의 관계 : 상속 vs 포함
