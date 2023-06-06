@@ -52,7 +52,7 @@ public class A_Variable {
 		 * - '='는 오른쪽 데이터를 왼쪽에 변수에 대입(저장)하는 연산자이다
 		 *  */
 		
-		// * 기본 자료형(Primitve type)
+		// * 기본 자료형(Primitive type)
 		// 실제 값을 메모리에 저장 해줌
 		// 논리형 : 1byte
 		boolean isTrue;
@@ -108,7 +108,7 @@ public class A_Variable {
 //		int int;
 //		int class;
 		
-		// 5) (권장사랑) 낙타표기법 (카멜케이스)
+		// 5) (권장사항) 낙타표기법 (카멜케이스)
 		// - 첫글자는 항상 소문자
 		// - 여러 단어가 올 때는 각 단어의 첫 글자를 대문자로 지정
 //		int maxnumber;

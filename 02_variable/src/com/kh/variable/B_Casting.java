@@ -10,7 +10,7 @@ public class B_Casting {
 	public static void main(String[] args) {
 		
 		B_Casting b = new B_Casting();
-//		b.autoCasting();
+		b.autoCasting();
 		b.casting();
 	}
 		

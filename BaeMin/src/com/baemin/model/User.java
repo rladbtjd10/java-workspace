@@ -21,7 +21,7 @@ public class User {
 		this.level = level;
 	}
 
-	public String getEmail() {3
+	public String getEmail() {
 		return email;
 	}
 
