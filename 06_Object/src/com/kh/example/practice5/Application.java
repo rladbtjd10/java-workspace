@@ -46,15 +46,7 @@ public class Application {
 		return Integer.parseInt(sc.nextLine());
 	}
 	public void insertEmp() {
-		/*
-		private int empNo;
-		private String name;
-		private char gender;
-		private String phone;
-		private String dept;
-		private int salary;
-		private double bonus;
-		*/
+		
 		System.out.print("사원 번호 : ");
 		int empNo = Integer.parseInt(sc.nextLine());
 		
