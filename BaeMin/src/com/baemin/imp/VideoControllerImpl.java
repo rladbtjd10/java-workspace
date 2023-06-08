@@ -1,4 +1,4 @@
-package com.baemin.controller;
+package com.baemin.imp;
 
 import com.baemin.model.Video;
 

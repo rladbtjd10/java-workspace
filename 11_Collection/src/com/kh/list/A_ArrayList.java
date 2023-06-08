@@ -70,7 +70,7 @@ public class A_ArrayList {
 		// 3. set(int index, E e) : 해당 인텍스의 값을 변경
 		list.set(3, new Person("오은영","강남",57)); //해당자리 수정할때 사용
 		
-//		System.out.println(list);
+		System.out.println(list);
 		
 		// 4. size() : 리스트 안에 몇 개의 데이터가 있는지
 		System.out.println("사람 수 : "+list.size());
@@ -80,10 +80,10 @@ public class A_ArrayList {
 //		System.out.println(list);
 		
 		// 6. get(int index) : 해당 인텍스로 객체 가져오기
-		System.out.println(list.get(0));
+		System.out.println(list.get(0) + "해당 인텍스로 객체 가져오기");
 		
 		// 7. subList(int index1, int index2) : 추출해서 새로운 List로 반환
-		List sub = list.subList(0,2); // 0, 1
+		List sub = list.subList(0,2); // 0, 1 -->0번째부터 2개를 추출한다는 뜻
 		System.out.println(sub);
 		
 		// 8. addAll(Collection c) : 컬렌션을 통채로 뒤에 추가하는 메서드

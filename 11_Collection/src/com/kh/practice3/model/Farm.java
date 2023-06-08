@@ -35,5 +35,24 @@ public class Farm {
 	public String toString() {
 		return "Farm [kind=" + kind + ", name=" + name + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(kind, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) { //같은지 비교해줄때 필요!
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Farm other = (Farm) obj;
+		return Objects.equals(kind, other.kind) && Objects.equals(name, other.name);
+	}
+	
+	
 	
 }

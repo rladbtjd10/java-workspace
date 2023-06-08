@@ -1,5 +1,7 @@
 package com.baemin.controller;
 
+import java.util.ArrayList;
+
 import com.baemin.model.Video;
 
 public class VideoController {
@@ -12,32 +14,31 @@ public class VideoController {
 	 * Delete : 삭제
 	 */
 	
-	Video[] videoList = new Video[5];
-	int index = 0;
+	ArrayList<Video> videoList = new ArrayList<>();
 
 	
-	public Video upload(Video video) { //영상 업로드
-		return videoList[index++] = video;
+	public void upload(Video video) { //영상 업로드
+		videoList.add(video);
 	}
 
 	
-	public Video[] VideoList() { //동영상 목록
+	public ArrayList<Video> VideoList() { //동영상 목록
 		return videoList;
 	}
 
 	
 	public Video viewVideo(int index) { // 동영상 1개 보기
-		return videoList[index];
+		return videoList.get(index);
 	}
 
 	
 	public Video updateVideo(int index, Video video) { //동영상 업데이트
-		return videoList[index] = video;
+		return videoList.set(index, video);
 	}
 
 	
-	public boolean deleteVideo() { //동영상 삭제
-		return false;
+	public boolean deleteVideo(Video video) { //동영상 삭제
+		return videoList.remove(video);
 	}
-
+	
 }
