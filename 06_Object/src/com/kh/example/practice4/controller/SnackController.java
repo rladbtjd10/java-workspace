@@ -18,7 +18,8 @@ public class SnackController {
 		// viewSnack은 Application에서 데이터를 담은 임시 저장 데이터 창고
 		String kind = viewSnack.getKind();
 		snack.setKind(kind);
-		// == snack.setKind(viewSnack.getKind());
+		// == snack.setKind(viewSnack.getKind()); 
+		//-->viewSnack 객체에서 kind 값을 가져와서 snack 객체의 kind 속성에 설정하는 코드
 		snack.setName(viewSnack.getName());
 		snack.setFlavor(viewSnack.getFlavor());
 		snack.setNumOf(viewSnack.getNumOf());
