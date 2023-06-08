@@ -3,7 +3,7 @@ package com.kh.variable;
 public class C_Printf {
 	public static void main(String[] args) {
 		
-		// Systeom.out.print(출려하고자하는값); - 출려만 함(줄바꿈 발생x)
+		// Systeom.out.print(출려하고자하는값); - 출력만 함(줄바꿈 발생x)
 		// Systeom.out.println(출려하고자하는값); - 출력 후 줄바꿈 발생o
 		
 		System.out.print("hello\n"); // hello 출력 \n=Enter의미 줄바꿈 

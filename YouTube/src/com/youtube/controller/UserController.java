@@ -7,10 +7,10 @@ public class UserController{
 	User user = null;
 
 	
-	public boolean login(String id, String password) {  //로그인
+	public boolean login(String id, String password) { // 로그인
 		if(user!=null && user.getId().equals(id) && user.getPassword().equals(password)) {
-				return true;
-	   }
+			return true;
+		}
 		return false;
 	}
 

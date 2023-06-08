@@ -1,6 +1,6 @@
-package com.youtube.controller;
+package com.baemin.imp;
 
-import com.youtube.model.User;
+import com.baemin.model.User;
 
 public interface UserControllerImpl {
 	
@@ -9,6 +9,5 @@ public interface UserControllerImpl {
 	public User viewPrifile();//프로필 보기
 	public User updateviewPrifile(); //프로필 수정
 	public boolean deleteviewPrifile(); //계정 삭제
-	
 
 }

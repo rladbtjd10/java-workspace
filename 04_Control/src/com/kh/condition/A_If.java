@@ -139,7 +139,7 @@ public class A_If {
 		
 		if(number > 0) {
 			System.out.print("양수");
-		} else if(number > 0) {
+		} else if(number < 0) {
 			System.out.print("음수");
 		} else {
 			System.out.print("0입니다.");

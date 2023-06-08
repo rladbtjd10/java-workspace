@@ -60,7 +60,7 @@ public class B_inDecrease {
 		int number3 = 30;
 		
 		System.out.println(number1++); // 10, number1 : 11
-		System.out.println((++number1) + (number2++)); // 32, number1 : 12, nimber2 : 21
+		System.out.println((++number1) + (number2++)); // 32, number1 : 12, number2 : 21
 		
 		System.out.println((number1++) + (--number2) + (--number3)); // 61, number1 : 12 (계산후에13), number2 : 20, number3 : 29
 		

@@ -176,7 +176,8 @@ public class C_For {
 		System.out.print("문자열 입력 > ");
 		String str = sc.nextLine();
 		
-		System.out.print("문자열 입력 : " + str.length());
+		System.out.print("문자열 입력 : " + str.length()+"글자");
+		System.out.println();
 		
 		for(int i=0; i<=str.length(); i++) {
 			System.out.println(str.charAt(i));
@@ -266,13 +267,13 @@ public class C_For {
 			 * **3* : i=2, j=2
 			 * ***4 : i=3, j=3
 			 */
-			for(int i=1; i<=4; i++) {
-		      for(int j=1; j<=4; j++) {
+			for(int i=0; i<4; i++) {
+		      for(int j=0; j<4; j++) {
 		    	  if(i == j) {
 		    		  System.out.print(i);
 		    	  } else {System.out.print("*");}
-		       System.out.println(); }
-		      }	     
+		      }
+			System.out.print("\n");}
 		}
 		
 		public void method15() {
@@ -281,7 +282,7 @@ public class C_For {
 			 * **     i=2, j=1, j=2,
 			 * ***    i=3, j=1, j=2, j=3
 			 * ****   i=4, j=1, j=2, j=3, j=4
-			 * *****  i=5, j=1, j=2, j=3, j=4, j-5
+			 * *****  i=5, j=1, j=2, j=3, j=4, j=5
 			 */
 			
 			for(int i=1; i<=5; i++) {
@@ -290,6 +291,11 @@ public class C_For {
 			    	   if(i == j) System.out.println();
 			}
 			}
+			
+//			for(int i=1; i<6; i++){
+//				   for(int j=1; j<6; j++){
+//				      if(i>=j){System.out.print("*");} continue;
+//				} System.out.print("\n");}
 			
 			
 		}
@@ -301,20 +307,21 @@ public class C_For {
 			 *   ****
 			 *  *****   
 			 */
-			//i=1, j =5
-			//i=2, j =4, j=5
-			//i=3, j =4, j=5, 
-			//i=4, j =4, j=5, j =4, j=5
-			//i=5, j =4, j=5, j =4, j=5
+			//i=1, j=5
+			//i=2, j=4, j=5
+			//i=3, j=3, j=4, j=5, 
+			//i=4, j=2, j=3, j=4, j=5
+			//i=5, j=1, j=2, j=3, j=4, j=5
 			for(int i=1; i<=5; i++) {
 			      for(int j=5; j>=1; j--) {
-			    		if(j < i) { System.out.print("");
+			    		if(j <= i) { System.out.print("*");
 			    		} else {
-			    			System.out.print("*");
+			    			System.out.print(" ");
 			    		}
 			      }
 			    		System.out.println();
 			    }
+	
 			      
 			
 				
@@ -330,7 +337,7 @@ public class C_For {
 //		c.method2();
 //		c.method3();
 //		c.method4();
-		c.method5();
+//		c.method5();
 //		c.method6();
 //		c.method7();
 //		c.method8();
@@ -341,7 +348,7 @@ public class C_For {
 //		c.method13();
 //		c.method14();
 //		c.method15();
-//		c.method16();
+		c.method16();
 		
 
 	}

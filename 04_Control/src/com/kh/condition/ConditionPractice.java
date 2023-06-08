@@ -442,7 +442,7 @@ public class ConditionPractice {
     	                       {System.out.printf("\n출석 점수 (20): " + "%.1f",(float)h);}
     	                       {System.out.printf("\n총점 : " + "%.1f",(float)total);}
                                {System.out.printf("\nPASS");} }
-    	if(total<70) {System.out.printf(" FAIL [점수 미달] (총점 "+"%.1f"+")\n", (float)total);}
+    	if(total<70) {System.out.printf(" FAILS [점수 미달] (총점 "+"%.1f"+")\n", (float)total);}
     	if(h < 14) {System.out.printf(" FAIL [출석 횟수 부족] ("+"%d"+"/20)", d);}
     	
 //    	if(total>=70 && h>=14) {System.out.printf("중간 고사 점수(20) : " + "%.1f",(float)i);}
@@ -468,9 +468,9 @@ public class ConditionPractice {
 //    	cp.practice6();
 //    	cp.practice7();
 //    	cp.practice8();
-    	cp.practice9();
+//    	cp.practice9();
 //    	cp.practice10();
-//    	cp.practice11();
+    	cp.practice11();
     	
     }
 }

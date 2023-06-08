@@ -26,7 +26,7 @@ public class hello { // 클래스 명은 파일명과 동일해야 한다.
 	// 모든 클래스가 메인 메소드를 가지고 있는 것은 아니지만
 	// 하나의 java 애플리케이션에는 main 매소드를 포함한 클래스가 반드시 하나는 있어야 한다.
 	public static void main(String[] args) {
-		
+				
 		System.out.println("Hello, world!");
 		
 	}
