@@ -1,10 +1,8 @@
-package com.youtube.imp;
+package com.baemin.imp;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.youtube.controller.UserController;
-import com.youtube.model.Comment;
+import com.baemin.model.Comment;
 
 //팀과제는 이 방식!
 public interface CommentImpl {
