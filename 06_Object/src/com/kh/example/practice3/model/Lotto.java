@@ -9,11 +9,11 @@ public class Lotto {
 	public String information() {
 		
 		for(int i=0; i<6; i++) {
-			lotto[i] = (int)(Math.random() * 45 + 1);
+			lotto[i] = (int)((Math.random() * 45) + 1);
 
 			//중복제거!!
 			for(int j=0; j<i; j++) {
-				if(lotto [i] == lotto[j]) {
+				if(lotto[i] == lotto[j]) {
 					i--;
 					break;
 				}
