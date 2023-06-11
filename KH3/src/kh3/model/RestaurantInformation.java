@@ -3,14 +3,37 @@ package kh3.model;
 public class RestaurantInformation {
 	
 	 private String name; // 식당이름
+	 private String address; //식당의 주소
+	 private String phoneNumber; //식당의 전화번호
+	 private String operatingHours; //식당의 영업시간
+	 private double rating; //식당의 평점
+	 private String discounts; //식당의 할인 정보
+	 private double latitude; //식당의 위치 정보 위도
+	 private double longitude; //식당의 위치 정보 경도
 	 private String photos; //식당사진 -수정,삭제
 	 private String menu; //식당메뉴-대표메뉴1개보기 -메뉴 여러개 보기 -메뉴업로드
 	 private String reviews; //리뷰(후기) -작성,수정,삭제
 	 private String operatingInfo; //식당 영업정보 작성,수정,삭제 - 운영시간 -휴식시간 -휴무일 -전화번호 
-	 private String facilities; //
-	 private String introduction;
+	 private String facilities; //	편의시설 - 남녀화장실구분, 무선인터넷, 단체석구비, 등
+	 private String introduction; // 매장소개
 	 private boolean isPicked; //매장Pick - 친구랑 같이 가기 좋은, 한식, 깔끔한, 홀테이블, 단체 예약이 가능한, 회식하기 좋은, 애인이랑 오기 좋은, 분위기 좋은, 한식, 해산물, 육류, 포차분위기, 전통적인, 한잔하기좋은등...
-	
+	 
+//	 private String name;
+//	    
+//	    
+//	    
+//	    
+//	    
+//	    
+	 
+//	 
+//	 name: 식당의 이름을 나타내는 문자열입니다.
+//	 address: 를 나타내는 문자열입니다.
+//	 phoneNumber: 를 나타내는 문자열입니다.
+//	 operatingHours: 을 나타내는 문자열입니다.
+//	 rating: 을 나타내는 실수형 변수입니다.
+//	 discounts: 를 저장하는 문자열 목록입니다.
+//	 latitude와 longitude: 와 경도로	 나타내는 실수형 변수입니다.
 
 	/*
 	 * CRUD
@@ -23,8 +46,8 @@ public class RestaurantInformation {
 	
 	
 
-//	편의시설 - 남녀화장실구분, 무선인터넷, 단체석구비, 등
-//	매장소개
+
+
 //	식당 목록
 	 
 //	 식당 사진/메뉴 업로드
@@ -83,7 +106,6 @@ public class RestaurantInformation {
 //
 //	 setLatitude(double latitude): 식당의 위도를 설정합니다.
 //	 setLongitude(double longitude): 식당의 경도를 설정합니다.
-//	 getLatitude(): 식당의 위도를 반환합니다.
 //	 getLongitude(): 식당의 경도를 반환합니다.
 	 
 //	 위의 기능들을 Restaurant 클래스에 추가하고, 필요에 따라 메서드를 구현하여 사용할 수 있습니다.

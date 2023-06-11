@@ -46,7 +46,7 @@ public class Notebook extends Product { /*extends Object*/
 		//1. super. 을 통해서 부모의 멤버변수에 직접 접근
 		super.brand = brand; //  부모가 private - 직접 접근 할 수 없음
 		super.pCode = pCode;  // 부모가 default - 같은 패키지에 있어야만 직접 접근이 가능
-		super.name = name;   //  부모가 protected -상속관계일 때 자식 객체에서 직접 접근 가능
+		super.name = name;   //  부모가 protected - 상속관계일 때 자식 객체에서 직접 접근 가능
 		super.price = price; //   부모가 public -어디서든 접근 가능
 		*/
 		
