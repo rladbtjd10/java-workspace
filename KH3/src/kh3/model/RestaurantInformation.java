@@ -18,30 +18,9 @@ public class RestaurantInformation {
 	 private String introduction; // 매장소개
 	 private boolean isPicked; //매장Pick - 친구랑 같이 가기 좋은, 한식, 깔끔한, 홀테이블, 단체 예약이 가능한, 회식하기 좋은, 애인이랑 오기 좋은, 분위기 좋은, 한식, 해산물, 육류, 포차분위기, 전통적인, 한잔하기좋은등...
 	 
-//	 private String name;
-//	    
-//	    
-//	    
-//	    
-//	    
-//	    
-	 
-//	 
-//	 name: 식당의 이름을 나타내는 문자열입니다.
-//	 address: 를 나타내는 문자열입니다.
-//	 phoneNumber: 를 나타내는 문자열입니다.
-//	 operatingHours: 을 나타내는 문자열입니다.
-//	 rating: 을 나타내는 실수형 변수입니다.
-//	 discounts: 를 저장하는 문자열 목록입니다.
-//	 latitude와 longitude: 와 경도로	 나타내는 실수형 변수입니다.
 
-	/*
-	 * CRUD
-	 * Create : 추가
-	 * Read : 읽기 (1개, 목록)
-	 * Update : 수정
-	 * Delete : 삭제
-	 */
+
+	
 	
 	
 	
