@@ -14,9 +14,9 @@ public class RestaurantInformation {
 	 private String menu; //식당메뉴-대표메뉴1개보기 -메뉴 여러개 보기 -메뉴업로드
 	 private String reviews; //리뷰(후기) -작성,수정,삭제
 	 private String operatingInfo; //식당 영업정보 작성,수정,삭제 - 운영시간 -휴식시간 -휴무일 -전화번호 
-	 private String facilities; //	편의시설 - 남녀화장실구분, 무선인터넷, 단체석구비, 등
+	 private String facility; //	편의시설 - 남녀화장실구분, 무선인터넷, 단체석구비, 등
 	 private String introduction; // 매장소개
-	 private boolean isPicked; //매장Pick - 친구랑 같이 가기 좋은, 한식, 깔끔한, 홀테이블, 단체 예약이 가능한, 회식하기 좋은, 애인이랑 오기 좋은, 분위기 좋은, 한식, 해산물, 육류, 포차분위기, 전통적인, 한잔하기좋은등...
+	 private boolean Picked; //매장Pick - 친구랑 같이 가기 좋은, 한식, 깔끔한, 홀테이블, 단체 예약이 가능한, 회식하기 좋은, 애인이랑 오기 좋은, 분위기 좋은, 한식, 해산물, 육류, 포차분위기, 전통적인, 한잔하기좋은등...
 	 
 
 

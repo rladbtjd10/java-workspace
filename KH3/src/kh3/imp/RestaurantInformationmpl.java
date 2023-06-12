@@ -43,7 +43,7 @@ public interface RestaurantInformationmpl {
 	public void getOperatingHours(); //식당의 운영시간을 반환합니다.
 
 	public void setRating(double rating); //식당의 평점을 설정합니다.
-	public void getRating(); //식당의 평점을 반환합니다.
+	public double getRating(); //식당의 평점을 반환합니다.
 
 	public void makeReservation(String date, int numOfPeople); //주어진 날짜와 인원수로 식당 예약을 생성합니다.
 	public void cancelReservation(String date); //주어진 날짜의 식당 예약을 취소합니다.
@@ -54,6 +54,6 @@ public interface RestaurantInformationmpl {
 
 	public void setLatitude(double latitude); //식당의 위도를 설정합니다.
 	public void setLongitude(double longitude); //식당의 경도를 설정합니다.
-	public void getLongitude(); //식당의 경도를 반환합니다.
+	public double getLongitude(); //식당의 경도를 반환합니다.
 
 }
