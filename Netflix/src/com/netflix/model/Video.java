@@ -1,4 +1,4 @@
-package com.baemin.model;
+package com.netflix.model;
 
 import java.util.Date;
 import java.util.List;

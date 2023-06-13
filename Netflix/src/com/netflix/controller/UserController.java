@@ -1,6 +1,6 @@
-package com.baemin.controller;
+package com.netflix.controller;
 
-import com.baemin.model.User;
+import com.netflix.model.User;
 
 public class UserController {
 	

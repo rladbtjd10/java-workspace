@@ -1,6 +1,6 @@
-package com.baemin.imp;
+package com.netflix.imp;
 
-import com.baemin.model.Video;
+import com.netflix.model.Video;
 
 public interface VideoControllerImpl {
 	

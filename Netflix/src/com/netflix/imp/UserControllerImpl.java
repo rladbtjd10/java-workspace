@@ -1,6 +1,6 @@
-package com.baemin.imp;
+package com.netflix.imp;
 
-import com.baemin.model.User;
+import com.netflix.model.User;
 
 public interface UserControllerImpl {
 	

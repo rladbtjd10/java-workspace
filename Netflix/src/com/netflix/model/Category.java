@@ -1,4 +1,4 @@
-package com.baemin.model;
+package com.netflix.model;
 
 //모델은 이런 방식으로
 public class Category {
