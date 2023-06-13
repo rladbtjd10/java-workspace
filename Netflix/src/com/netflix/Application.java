@@ -1,4 +1,4 @@
-package com.baemin;
+package com.netflix;
 
 public class Application {
 

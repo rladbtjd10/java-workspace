@@ -1,9 +1,9 @@
-package com.baemin.controller;
+package com.netflix.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.baemin.model.Comment;
+import com.netflix.model.Comment;
 
 //개인과제는! 이방식~~
 public class CommentController {

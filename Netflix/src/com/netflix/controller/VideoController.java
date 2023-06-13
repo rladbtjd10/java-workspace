@@ -1,8 +1,8 @@
-package com.baemin.controller;
+package com.netflix.controller;
 
 import java.util.ArrayList;
 
-import com.baemin.model.Video;
+import com.netflix.model.Video;
 
 public class VideoController {
 	

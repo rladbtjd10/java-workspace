@@ -1,4 +1,4 @@
-package com.baemin.imp;
+package com.netflix.imp;
 
 import java.util.List;
 
