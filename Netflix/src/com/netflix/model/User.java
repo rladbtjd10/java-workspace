@@ -2,7 +2,7 @@ package com.netflix.model;
 
 import java.util.List;
 
-import com.baemin.model.Video;
+import com.netflix.model.Video;
 
 public class User {
 	

@@ -1,5 +1,6 @@
 package com.kh.time;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -154,45 +155,69 @@ public class A_Date {
 	public void practice() {
 		
 		Scanner sc = new Scanner(System.in);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		Date result = null;
 		
+		while(true) {
+			
 		System.out.print("자신이 태어난 날 입력(yyyy/MM/dd) :");
-		String a = sc.nextLine();
+		String data = sc.nextLine();
+		try {
+			result = sdf.parse(data); //yyyy/MM/dd 형식으로만 입력되게 다른거 입력했을때는 안되게
+			break;
+		} catch (ParseException e) {}
+
+		}
+		
+		Calendar inputDate = Calendar.getInstance();
+		Calendar today = Calendar.getInstance();
+		
+		inputDate.setTime(result);
+		
+		SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy/MM/dd은 E요일입니다.");
+		System.out.println(sdf2.format(result));
+		
+		long day = (today.getTimeInMillis() - inputDate.getTimeInMillis())/(1000 * 24 * 60 * 60);
+		System.out.println("태어난 날부터 지금까지" + day + "일 지났습니다.");
+		
+		
+//		String a = sc.nextLine();
 		
 		//1. String 클래스의 split 메서드를 이용하는 방법
 		//split(String regex) : 입력받은 구분자로 문자열을 분리해서 문자열의 배열로 담아서 리턴
-		String[] strArr = a.split("/");
-		int b = Integer.parseInt(strArr[0]);
-		int c = Integer.parseInt(strArr[1]);
-		int d = Integer.parseInt(strArr[2]);
+//		String[] strArr = a.split("/");
+//		int b = Integer.parseInt(strArr[0]);
+//		int c = Integer.parseInt(strArr[1]);
+//		int d = Integer.parseInt(strArr[2]);
+//		
+//		Calendar date = Calendar.getInstance();
+//		date.set(b, c-1, d);
+//		
+//		switch() {
+//		
+//		}  ->다완성못함
+//		
 		
-		Calendar date = Calendar.getInstance();
-		date.set(b, c-1, d);
-		
-		switch() {
 		
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		boolean b = true;
-//		
-//		while(b) {
-//			
-//			System.out.println("요일 : " +);
-//			
-//		}
-		
-		
-		
-	}
 
-}
+	}
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+	
