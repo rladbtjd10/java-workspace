@@ -1,10 +1,12 @@
 package com.netflix.controller;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.netflix.model.User;
 import com.netflix.model.Video;
@@ -21,6 +23,7 @@ public class VideoController {
 	
 	ArrayList<Video> videoList = new ArrayList<>();
 	UserController userController = new UserController();
+	List<Video> saveVideo = new ArrayList<>();
 
 
 	public void upload(Video video) { //영상 업로드
@@ -50,8 +53,9 @@ public class VideoController {
 		return false;
 	}
 	
+	// 영상 저장하기
 	public void saveVideo(Video video) {
-		return;
+	    saveVideo.add(video);
 	}
 
 	// 영상 검색하기
@@ -72,43 +76,25 @@ public class VideoController {
 
 	// 영상 공유하기
 	public void shareVideo(Video video, String platform) {
-		// 공유 로직 구현
 		System.out.println("Sharing video on " + platform + " : " + video.getTitle());
 	}
 
 	// 인기 영상 목록 조회하기
 	public Video[] getPopularVideos() {
-		// 인기 영상 로직 구현
-		// 예시로서 랜덤하게 영상을 선택
-		Random random = new Random();
-		int numVideos = Math.min(videoList.size(), 5); // 최대 5개의 영상 반환
-		Set<Integer> selectedIndices = new HashSet<>();
-		List<Video> popularVideos = new ArrayList<>();
-		while (selectedIndices.size() < numVideos) {
-			int index = random.nextInt(videoList.size());
-			if (!selectedIndices.contains(index)) {
-				selectedIndices.add(index);
-				popularVideos.add(videoList.get(index));
-			}
+		List<Video> sortedVideos = videoList.stream()
+	            .sorted(Comparator.comparingInt(Video::getLikes).reversed())
+	            .limit(10)
+	            .collect(Collectors.toList());
+
+	    return sortedVideos.toArray(new Video[0]);
 		}
-		return popularVideos.toArray(new Video[0]);
-	}
 
 	// 영상 재생 시간 계산하기
 	public int calculateVideoDuration(Video video) {
 		return video.getDuration();
 	}
 
-	// 사용자별 좋아요한 영상 목록 조회하기
-	public Video[] getLikedVideos(User user) {
-		List<Video> likedVideos = new ArrayList<>();
-		for (Video video : videoList) {
-			if (video.isLikedByUser(user)) {
-				likedVideos.add(video);
-			}
-		}
-		return likedVideos.toArray(new Video[0]);
-	}
+	
 	
 }
 
