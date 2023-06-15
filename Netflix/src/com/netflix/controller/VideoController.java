@@ -41,7 +41,18 @@ public class VideoController {
 	public Video updateVideo(int index, Video video) { //동영상 업데이트
 		return videoList.set(index, video);
 	}
-
+	
+	public boolean deleteVideo(Video video) { //동영상 삭제
+		if (videoList.contains(video)) {
+		      videoList.remove(video);
+		      return true;
+	} 
+		return false;
+	}
+	
+	public void saveVideo(Video video) {
+		return;
+	}
 
 	// 영상 검색하기
 	public Video[] searchVideo(String keyword) {
@@ -62,7 +73,7 @@ public class VideoController {
 	// 영상 공유하기
 	public void shareVideo(Video video, String platform) {
 		// 공유 로직 구현
-		System.out.println("Sharing video on " + platform + ": " + video.getTitle());
+		System.out.println("Sharing video on " + platform + " : " + video.getTitle());
 	}
 
 	// 인기 영상 목록 조회하기
