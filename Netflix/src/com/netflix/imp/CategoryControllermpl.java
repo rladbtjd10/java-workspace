@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.netflix.model.Category;
 
-public interface CategoryController {
+public interface CategoryControllermpl {
 	
 	void addCategory(Category category);
     void removeCategory(Category category);
