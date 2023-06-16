@@ -156,7 +156,7 @@ public class A_Array {
 		System.out.println(number.hashCode() == copy.hashCode()); // true
 	}
 	
-	// 2. 깊은 복사 : 동일한 새로운 배열을 하나 생성해서 내부의 값들도 함께 복사
+	// 2. 깊은 복사 : 동일한 새로운 배열을 하나 생성해서 내부의 값들도 함께 복사 (배열을 바꿔도 기존 배열은 바뀌지 않음)
 	// 1) for문을 이용항 깊은 복사 
 	public void method6(){	
 		

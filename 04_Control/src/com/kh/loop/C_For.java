@@ -179,7 +179,7 @@ public class C_For {
 		System.out.print("문자열 입력 : " + str.length()+"글자");
 		System.out.println();
 		
-		for(int i=0; i<=str.length(); i++) {
+		for(int i=0; i<str.length(); i++) {
 			System.out.println(str.charAt(i));
 			
 			/*
@@ -341,14 +341,14 @@ public class C_For {
 //		c.method6();
 //		c.method7();
 //		c.method8();
-//		c.method9();
+		c.method9();
 //		c.method10();
 //		c.method11();
 //		c.method12();
 //		c.method13();
 //		c.method14();
 //		c.method15();
-		c.method16();
+//		c.method16();
 		
 
 	}
