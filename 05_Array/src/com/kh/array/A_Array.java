@@ -40,7 +40,7 @@ public class A_Array {
 		
 		int[] score = new int[5];  // 배열의 크기를 지정하지 않으면 에러가 남
 		/*
-		 * 기본 자료형 : 스텍 메모리에 생성된 공간에 길제 변수 값을 저장하는 반면
+		 * 기본 자료형 : 스텍 메모리에 생성된 공간에 실제 변수 값을 저장하는 반면
 		 * 참조 자료형 : 실제 데이터 값은 힙 메모리에 저장하고,
 		 *            스텍 메모리의 변수 공간에는 실제 변수값이 저장된 힙 메모리의 주소값 저장
 		 *            
@@ -240,13 +240,13 @@ public class A_Array {
 		A_Array a = new A_Array();
 //		a.method1();
 //		a.method2();
-		a.method3();
+//		a.method3();
 //		a.method4();
 //		a.method5();
 //		a.method6();
 //		a.method7();
 //		a.method8();
-//		a.method9();
+		a.method9();
 
 
 	}

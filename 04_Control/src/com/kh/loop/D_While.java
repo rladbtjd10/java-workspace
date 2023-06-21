@@ -61,7 +61,7 @@ public class D_While {
     	 
     	 /*do while문
     	  * 
-    	  * [표형법]
+    	  * [표현법]
     	  * do {
     	  * ..실행 코드..
     	  * } while(조건식);
@@ -189,10 +189,10 @@ public class D_While {
 		D_While d = new D_While();
 //		d.method1();
 //		d.method2();
-//		d.method3();
+		d.method3();
 //		d.method4();
 //		d.method5();
-		d.method6();
+//		d.method6();
 		
 		
 		
